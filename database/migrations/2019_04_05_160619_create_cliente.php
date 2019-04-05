@@ -14,7 +14,14 @@ class CreateCliente extends Migration
     public function up()
     {
         Schema::create('cliente', function (Blueprint $table) {
-            $table->bigIncrements('id');
+
+            $table->bigInteger('idCliente')->autoIncrement();
+            $table->string('rut',10)>unique()->required();
+            $table->string('nombre',25)->required();
+            $table->string('apellidoP',25)->required();
+            $table->string('apellidoM',25)->required();
+            $table->integer('telefono')->required();
+            $table->string('direccion',50)->required();
             $table->timestamps();
         });
     }
