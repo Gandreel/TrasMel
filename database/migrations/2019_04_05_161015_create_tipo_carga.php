@@ -14,7 +14,9 @@ class CreateTipoCarga extends Migration
     public function up()
     {
         Schema::create('tipo_carga', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigInteger('idTipoCarga')->autoIncrement();
+            $table->double('imo',2,1)->required();
+            $table->string('descripcion',100)->required();
             $table->timestamps();
         });
     }

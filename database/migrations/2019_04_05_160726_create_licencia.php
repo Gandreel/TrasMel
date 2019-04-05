@@ -14,7 +14,10 @@ class CreateLicencia extends Migration
     public function up()
     {
         Schema::create('licencia', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigInteger('id')>unique()->required();
+            $table->date('fechaEmision')->required();
+            $table->date('fechaVencimiento')->required();
+            $table->string('foto')->required();
             $table->timestamps();
         });
     }
