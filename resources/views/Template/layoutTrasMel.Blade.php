@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-
-<!-- Barra Superior -->		
 <div class="Container-fluid">
-	<nav class="navbar navbar-dark bg-dark">
+	
+	<!-- Barra Superior -->		
+	<nav class="navbar" style="background: #56385e; position: absolute;">
 		<div class="col-md-3">
 			<a href="#!" class="">TrasMel</a>
 		</div>
@@ -27,8 +27,31 @@
 			Holi mUndo
 		</div>
 	</nav>
-</div>
 
+<!--  Carusel -->
+	<div class="carousel carousel-slider center">
+    	<div class="carousel-fixed-item center">
+      	<a class="btn waves-effect white grey-text darken-text-2">button</a>
+    	</div>
+    	<div class="carousel-item red white-text" href="{{ asset('img/cc-01.jpg') }}">
+      		<h2>First Panel</h2>
+      		<p class="white-text">This is your first panel</p>
+    	</div>
+    	<div class="carousel-item amber white-text" href="{{ asset('img/cc-01.jpg') }}">
+      		<h2>Second Panel</h2>
+      		<p class="white-text">This is your second panel</p>
+    	</div>
+    	<div class="carousel-item green white-text" href="{{ asset('img/cc-01.jpg') }}">
+      		<h2>Third Panel</h2>
+      		<p class="white-text">This is your third panel</p>
+    	</div>
+    	<div class="carousel-item blue white-text" href="{{ asset('img/cc-01.jpg') }}">
+      		<h2>Fourth Panel</h2>
+      		<p class="white-text">This is your fourth panel</p>
+    	</div>
+  	</div>
+
+</div>
 <!-- Materialized Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
