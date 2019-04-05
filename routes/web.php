@@ -22,3 +22,6 @@ Route::get('/TrasMel', function () {
 Route::get('/Login',function(){
     return view('TrasMel/autentificacion/login');
 });
+Route::get('/Registro',function(){
+    return view('TrasMel/autentificacion/registro');
+});
