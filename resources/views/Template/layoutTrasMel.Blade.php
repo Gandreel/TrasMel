@@ -10,8 +10,8 @@
 </head>
 <body>
 <div class="Container-fluid">
-	
-	<!-- Barra Superior -->		
+
+	<!-- Barra Superior -->
 	<nav class="navbar" style="background: #56385e; position: absolute;">
 		<div class="col-md-3">
 			<a href="#!" class="">TrasMel</a>
