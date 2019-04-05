@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/TrasMel', function () {
+    return view('Template/layoutTrasMel');
+});
