@@ -18,6 +18,7 @@ class CreateUsuario extends Migration
             $table->string('nick',25)->required();
             $table->string('pass',12)->required();
             $table->string('correo',50)->required();
+            $table->rememberToken();
             $table->timestamps();
         });
     }

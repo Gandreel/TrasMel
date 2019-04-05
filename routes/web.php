@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/TrasMel', function () {
     return view('Template/layoutTrasMel');
 });
+
+Route::get('/Login',function(){
+    return view('TrasMel/autentificacion/login');
+});
