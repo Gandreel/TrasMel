@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="{{ asset('css/materialize.css') }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">            
 </head>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.slider').slider();
+  });
+</script>
 <body>
 	
 <!-- Barra Superior -->		
@@ -41,12 +54,9 @@
 </div>
 
 <!-- Contenido -->
-<div class="container-fluid">
-	<br>
-	@yield('contenido')	
-	<br>
-</div>
-
+<br>
+@yield('contenido')	
+<br>
 <!--Footer -->
 <footer class="page-footer deep-purple darken-4">
           <div class="container">
