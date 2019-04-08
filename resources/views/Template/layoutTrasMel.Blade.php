@@ -1,45 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TrasMel</title>
+	<title>@yield('title')</title>
  
- <!-- Compiled and minified CSS -->
+ 	<!-- Materileze CSS -->
     <link rel="stylesheet" href="{{ asset('css/materialize.css') }}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-            
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">            
 </head>
-<body style="background: #6c4675">
+<body>
 	
 <!-- Barra Superior -->		
 <div class="container-fluid">
-<nav class="navbar-fixed">
-    <div class="nav-wrapper" ><!-- style="background: #26004D" -->
-    	<div class="row">
-    		<div class="col s12 m4 l2">
-      			<a href="{{ url('TrasMel') }}" class="brand-logo">TrasMel</a>
-      		</div>
-      		<div class="col s12 m4 l8">
-      			<ul class="tabs tabs-transparent">
-        			<li class="tab"><a href="#test1">Test 1</a></li>
-        			<li class="tab"><a class="active" href="#test2">Test 2</a></li>
-        			<li class="tab"><a href="#test3">Test 3</a></li>
-        			<li class="tab"><a href="#test4">Test 4</a></li>
-    		</div>
-      		<div class="col s12 m4 l2" align="right">
-      			Hola Miundo
-      		</div>
+<nav class="nav-wrapper deep-purple darken-4">
+    <div class="row">
+    	<div class="col s2 m1 l2">
+     		<!-- Logo -->
+     		<a href="{{ url('TrasMel') }}" class="brand-logo">TrasMel</a>
+      	</div>
+      	<div class="col s8 m2 l8">
+      		<!-- Menu -->
+			<ul id="nav-mobile" class="hide-on-med-and-down">
+        		<li><a href="sass.html">Home</a></li>
+        		<li><a href="badges.html">--</a></li>
+        		<li><a href="collapsible.html">---</a></li>
+      		</ul>
     	</div>
+      	<div class="col s2 m1 l2" align="right">
+      		<!-- Sesion -->
+      		<ul class="right hide-on-med-and-down">
+      			<li>
+      				<a href="#">
+      					<i class="material-icons right">account_circle</i>
+      					Ingresar
+      				</a>
+      			</li>
+      		</ul>
+      	</div>
     </div>
 </nav>
 </div>
 
-<!--  Carusel -->
-<div>
-		
-</div>
+<!-- Contenido -->
+<main class="container-fluid">
+	<br>
+	@yield('contenido')	
+	<br>
+</main>
 
-<!-- Compiled and minified JavaScript -->
+<!--Footer -->
+<footer class="page-footer deep-purple darken-4">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">TrasMel</h5>
+                <p class="grey-text text-lighten-4"></p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Redes Sociales</h5>
+                <ul>
+                  <li>
+                  	<a class="grey-text text-lighten-3" href="#!"><i class="material-icons left">drafts</i>Facebook</a></li>
+                  <li>
+                  	<a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">--</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">--</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2019 TrasMel. Todos los derechos reservados.
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+
+<!-- Materileze JavaScript -->
 <script src="{{ asset('materialize.min.js') }}"></script>
 </body>
 </html>
