@@ -41,11 +41,11 @@
 </div>
 
 <!-- Contenido -->
-<main class="container-fluid">
+<div class="container-fluid">
 	<br>
 	@yield('contenido')	
 	<br>
-</main>
+</div>
 
 <!--Footer -->
 <footer class="page-footer deep-purple darken-4">
