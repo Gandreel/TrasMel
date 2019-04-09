@@ -2,27 +2,29 @@
 <html>
 <head>
 	<title>@yield('title')</title>
- 
+
  	<!-- Materileze CSS -->
     <link rel="stylesheet" href="{{ asset('css/materialize.css') }}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">            
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="bin/jquery-3.2.1.min.js"><\/script>'); }
+    </script>
 <script>
-	document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.slider');
-    var instances = M.Slider.init(elems, options);
-  });
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.slider');
+            var instances = M.Slider.init(elems, options);
+          });
 
-  // Or with jQuery
+          // Or with jQuery
 
-  $(document).ready(function(){
-    $('.slider').slider();
-  });
+          $(document).ready(function(){
+            $('.slider').slider();
+          });
 </script>
 <body>
-	
-<!-- Barra Superior -->		
+
+<!-- Barra Superior -->
 <div class="container-fluid">
 <nav class="nav-wrapper deep-purple darken-4">
     <div class="row">
@@ -55,7 +57,7 @@
 
 <!-- Contenido -->
 <br>
-@yield('contenido')	
+@yield('contenido')
 <br>
 <!--Footer -->
 <footer class="page-footer deep-purple darken-4">
