@@ -14,7 +14,7 @@ class CreateProductoDespacho extends Migration
     public function up()
     {
         Schema::create('producto_despacho', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            
             $table->timestamps();
         });
     }

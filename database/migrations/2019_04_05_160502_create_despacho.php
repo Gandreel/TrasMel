@@ -14,13 +14,10 @@ class CreateDespacho extends Migration
     public function up()
     {
         Schema::create('despacho', function (Blueprint $table) {
-            $table->bigInteger('numeroDespacho')->autoIncrement();
+            $table->bigIncrements('numeroDespacho');
             $table->date('fechaSalida')->required();
             $table->date('fechaEntrega')->required();
-            $table->string('cliente',12)->required();
-            $table->string('camion',7)->required();
-            $table->string('chofer',12)->required();
-            $table->bigInteger('producto')->required();
+
             $table->timestamps();
         });
     }

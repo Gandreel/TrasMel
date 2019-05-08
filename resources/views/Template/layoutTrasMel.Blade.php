@@ -4,7 +4,10 @@
 	<title>@yield('title')</title>
  
  	<!-- Materileze CSS -->
-    <link rel="stylesheet" href="{{ asset('css/materialize.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/materialize.css') }}">
+		<script src="{{ asset('materialize.min.js') }}"></script>
+		<script src="{{ asset('materialize.js')}}"></script>
+		
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">            
 </head>
 <body>
@@ -25,7 +28,7 @@
         		<li><a href="collapsible.html">---</a></li>
       		</ul>
     	</div>
-      	<div class="col s2 m1 l2" align="right">
+      	<div class="col s2 m1 l2" aling="right">
       		<!-- Sesion -->
       		<ul class="right hide-on-med-and-down">
       			<li>

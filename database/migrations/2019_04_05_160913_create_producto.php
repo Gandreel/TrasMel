@@ -14,12 +14,14 @@ class CreateProducto extends Migration
     public function up()
     {
         Schema::create('producto', function (Blueprint $table) {
-            $table->bigInteger('idProducto')->autoIncrement();
-            $table->string('nombre',50)->required();
+            $table->bigIncrements('idProducto');
+            $table->string('nombre')->required();
             $table->decimal('largo')->required();
             $table->decimal('ancho')->required();
             $table->decimal('alto')->required();
             $table->decimal('peso')->required();
+            $table->boolean('fragil')->default(false);
+            
             $table->timestamps();
         });
     }

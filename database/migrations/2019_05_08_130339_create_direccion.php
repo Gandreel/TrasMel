@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductoCarga extends Migration
+class CreateDireccion extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,14 @@ class CreateProductoCarga extends Migration
      */
     public function up()
     {
-        Schema::create('producto_carga', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('direccion', function (Blueprint $table) {
+            $table->bigIncrements('idDireccion');
+            $table->string('calle');
+            $table->integer('numero')->unsigned();
+            $table->string('poblacion');
+            $table->string('ciudad');
+            $table->string('region');
+
             $table->timestamps();
         });
     }
@@ -26,6 +32,6 @@ class CreateProductoCarga extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('producto_carga');
+        Schema::dropIfExists('direccion');
     }
 }

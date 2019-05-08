@@ -14,12 +14,12 @@ class CreateCamion extends Migration
     public function up()
     {
         Schema::create('camion', function (Blueprint $table) {
-           $table->string('patente',7)>unique()->required();
-           $table->string('modelo',30)->required();
-           $table->integer('anno',4)->required();
-           $table->integer('tara',6)->required();
-           $table->tinyInteger('tipo',2)->required();
-           $table->integer('carga')->required();
+        $table->bigIncrements('idCamion');
+           $table->string('patente');
+           $table->string('modelo');
+           $table->integer('anno');
+           $table->integer('tara');
+           $table->integer('carga');
            $table->timestamps();
         });
     }

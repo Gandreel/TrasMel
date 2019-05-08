@@ -14,12 +14,13 @@ class CreateChofer extends Migration
     public function up()
     {
         Schema::create('chofer', function (Blueprint $table) {
-            $table->string('rut',12)>unique()->required();
-            $table->string('nombre',25)->reuired();
-            $table->string('apellidoP',25)->required();
-            $table->string('apellidoM',25)->required();
-            $table->mediumInteger('telefono',9)->required();
-            $table->boolean('activo')->required();
+            $table->bigIncrements('idChofer');
+            $table->string('rut');
+            $table->string('nombre');
+            $table->string('apellidoP');
+            $table->string('apellidoM');
+            $table->mediumInteger('telefono');
+            $table->boolean('activo');
             $table->timestamps();
         });
     }
