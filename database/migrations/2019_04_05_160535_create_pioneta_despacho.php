@@ -15,7 +15,7 @@ class CreatePionetaDespacho extends Migration
     {
         Schema::create('pioneta_despacho', function (Blueprint $table) {
 
-            $table->bigInteger('numeroDespacho')->required();
+
             $table->timestamps();
         });
     }
