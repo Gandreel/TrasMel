@@ -14,21 +14,21 @@
 <div class="testbox">
   <h1>Registro de Usuario</h1>
 
-  <form action="/">
+  <form action="{{ URL::to('store') }}" method="POST" role="form">
 
   <hr>
   <label id="icon" for="email"><i class="icon-envelope "></i></label>
-  <input type="text" name="email" id="email" placeholder="Email" required/>
+  <input type="text" name="correo" id="correo" placeholder="Email" required/>
 
   <label id="icon" for="nickName"><i class="icon-user"></i></label>
-  <input type="text" name="nickName" id="nickName" placeholder="Nick Name" required/>
+  <input type="text" name="nick" id="nick" placeholder="Nick Name" required/>
 
   <label id="icon" for="pass"><i class="icon-shield"></i></label>
   <input type="password" name="pass" id="pass" placeholder="Password" required/>
   <hr>
 
    <p>Si aprieta el boton de registro acepta los <a href="#">terminos y condiciones</a>.</p>
-   <a href="#" class="button">Registro</a>
+   <button class="button">Registro</button>
   </form>
 </div>
 </body>

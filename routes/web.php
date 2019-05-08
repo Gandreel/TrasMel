@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,8 @@ Route::get('/Login',function(){
 Route::get('/Registro',function(){
     return view('TrasMel/autentificacion/registro');
 });
+
+//post
+Route::post('/Registro', 'usuarioController@store' );
+
+
