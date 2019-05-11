@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Modelo\Camion;
 
 class CamionController extends Controller
 {
@@ -34,7 +35,18 @@ class CamionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cam = new Camion();
+        $cam->patente = $request ['patente'];
+        $cam->modelo= $request['modeloCamion'];
+        $cam->anno = $request['annoCamion'];
+        $cam->tara = $request['taraCamion'];
+        $cam->carga = $request['carga'];
+        $cam->tipoCamion_id = $request['tipoCamion'];
+        $cam->save();
+
+        $mensaje = "Camión ingresado correctamente";
+
+        return view('TrasMel\Home\home', compact('mensaje'));
     }
 
     /**

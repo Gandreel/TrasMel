@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Modelo\Direccion;
 
-class cargaController extends Controller
+class direccionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +35,19 @@ class cargaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dir = new Direccion();
+        $dir->calle = $request['calle'];
+        $dir->numero = $request['numero'];
+        $dir->poblacion = $request['poblacion'];
+        $dir->ciudad = $request['ciudad'];
+        $dir->region = $request['region'];
+        $dir->save();
+
+
+        $mensaje = "Direccion Agregada Correctamente";
+
+        return view("TrasMel\Home\home", compact("mensaje"));
+
     }
 
     /**

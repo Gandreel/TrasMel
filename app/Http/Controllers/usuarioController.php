@@ -37,7 +37,7 @@ class usuarioController extends Controller
      */
     public function store(Request $request)
     {
-        $usu = new usuario();
+        $usu = new Usuario();
         $usu->nick = $request['nick'];
         $usu->pass = $request['pass'];
         $usu->correo = $request['correo'];

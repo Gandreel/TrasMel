@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Modelo\Chofer;
 
 class choferController extends Controller
 {
@@ -34,7 +35,14 @@ class choferController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cho = new Chofer();
+        $cho->rut = $request['rutChofer'];
+        $cho->nombre = $request['nombreChofer'];
+        $cho->apellidoP = $request['apChofer'];
+        $cho->apellidoM = $request['amChofer'];
+        $cho->telefono = $request['fonoChofer'];
+        $cho->activo = $request['activo'];
+        $cho->save();
     }
 
     /**

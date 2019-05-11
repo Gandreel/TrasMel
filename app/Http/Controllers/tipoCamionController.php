@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class tipoCargaController extends Controller
+class tipoCamionController extends Controller
 {
     /**
      * Display a listing of the resource.

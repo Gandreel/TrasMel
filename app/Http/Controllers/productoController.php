@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Modelo\Producto;
 
 class productoController extends Controller
 {
@@ -34,7 +35,15 @@ class productoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $prod = new Producto();
+        $prod->nombre = $request['nombre Producto'];
+        $prod->largo = $request['largoProducto'];
+        $prod->ancho = $request['anchoProducto'];
+        $prod->alto = $request['altoProducto'];
+        $prod->peso = $request['pesoProducto'];
+        $prod->fragil = $request['FragilProducto'];
+        $prod->tipoProducto = $request['tipoProducto'];
+        $prod->save();
     }
 
     /**

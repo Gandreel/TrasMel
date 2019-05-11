@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Modelo\Licencia;
 
 class licenciaController extends Controller
 {
@@ -34,7 +35,14 @@ class licenciaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $lic = new Licencia();
+        $lic->numeroLicencia = $request['numeorLicencia'];
+        $lic->fechaEmision = $request['emision'];
+        $lic->fechaVencimiento = $request['vencimiento'];
+        $lic->foto = $request['fotoLicencia'];
+        $lic->tipoLicencia = $request['tipoLicencia'];
+        $lic->save();
+
     }
 
     /**

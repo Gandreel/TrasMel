@@ -28,6 +28,12 @@ Route::get('/Registro',function(){
 });
 
 //post
-Route::post('/Registro', 'usuarioController@store' );
+Route::post('loger', 'usuarioController@store' );
+
+Route::post('user/profile', 'usuarioController@store')->name('profile');
+
+
+Route::post('user/profile', 'UserProfileController@show')->name('profile');
+
 
 

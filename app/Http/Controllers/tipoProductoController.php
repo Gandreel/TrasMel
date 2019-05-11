@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Modelo\TipoProducto;
 
-class tipoController extends Controller
+class tipoProductoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +35,15 @@ class tipoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tipoProd = new TipoProducto();
+        $tipoProd->immo = $request['immoProd'];
+        $tipoProd->decripcion = $request['decripcionProducto'];
+        $tipoProd->save();
+
+        $mensaje = "Tipo de Producto Ingresado correctamente";
+
+        return view("TrasMel\Home\home", compact("mensaje"));
+
     }
 
     /**

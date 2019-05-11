@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Modelo\Despacho;
 
 class despachoController extends Controller
 {
@@ -34,7 +35,18 @@ class despachoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $des = new Despacho();
+        $des->fechaSalida = $request['salidaDespacho'];
+        $des->fechaEntrega = $request['entregaDespacho'];
+        $des->camion_id = $request['camionDespacho'];
+        $des->cliente_id = $request['clienteDespacho'];
+        $des->direccion_id = $request['direccionDespacho'];
+        $des->chofer_id = $request['choferDespacho'];
+        $des->save();
+
+        $mensaje = "Despacho Ingresado correctamente";
+        return view('TrasMel\Home\home', compact('mensaje'));
+
     }
 
     /**

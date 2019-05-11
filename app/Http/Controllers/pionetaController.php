@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Modelo\Pioneta;
+use Illuminate\Support\Facades\View;
 
 class pionetaController extends Controller
 {
@@ -34,7 +36,18 @@ class pionetaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pio = new Pioneta();
+        $pio->rut = $request['rutPioneta'];
+        $pio->nombre = $request['nombrePioneta'];
+        $pio->apellidoP = $request['apPioneta'];
+        $pio->apellidoM = $request['amPioneta'];
+        $pio->telefono = $request['fonoPioneta'];
+        $pio->activo = $request['activoPioneta'];
+        $pio->save();
+
+        $mensaje = "Registro de Pioneta exitoso";
+
+        return view("TrasMel\Home\home", compact("mensaje"));
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Modelo\Cliente;
 
 class clienteController extends Controller
 {
@@ -34,7 +35,16 @@ class clienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cli = new Cliente();
+        $cli->rut = $request['rutCliente'];
+        $cli->nombre = $request['nombreCliente'];
+        $cli->apellidoP = $request['apePatCliente'];
+        $cli->apellidoM = $request['apeMatCliente'];
+        $cli->telefono = $request['fonoCliente'];
+        $cli->save();
+
+        $mensaje = "Cliente Almacenado correctamente";
+        return view("Trasmel\Home\home", compact("mensaje"));
     }
 
     /**

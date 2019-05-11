@@ -14,7 +14,7 @@
 <div class="testbox">
   <h1>Registro de Usuario</h1>
 
-  <form action="{{ URL::to('store') }}" method="POST" role="form">
+  <form action="{{ URL::to('/store') }}" method="POST" role="form">
 
   <hr>
   <label id="icon" for="email"><i class="icon-envelope "></i></label>
@@ -28,7 +28,7 @@
   <hr>
 
    <p>Si aprieta el boton de registro acepta los <a href="#">terminos y condiciones</a>.</p>
-   <button class="button">Registro</button>
+   <input type="submit" class="button" value="enviar"/>
   </form>
 </div>
 </body>
