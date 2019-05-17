@@ -17,7 +17,7 @@ Route::get('/', function () {
 });
 
 Route::get('/TrasMel', function () {
-    return view('TrasMel/Home/home');
+    return view('TrasMel/Home/Index');
 });
 
 Route::get('/Login',function(){

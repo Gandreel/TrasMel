@@ -1,85 +1,146 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>@yield('title')</title>
- 
- 	<!-- Materileze CSS -->
-		<link rel="stylesheet" href="{{ asset('css/materialize.css') }}">
-		<script src="{{ asset('materialize.min.js') }}"></script>
-		<script src="{{ asset('materialize.js')}}"></script>
-		
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">            
+  <title>TrasMel</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="TrasMel">
+  <meta name="keywords" content="TrasMel,Trasporte,Encargo">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Favicon -->
+  <link href="{{ asset('img/favicon.ico') }}" rel="shortcut icon"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/slicknav.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/animate.css') }}"/>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+
+
 </head>
 <body>
-	
-<!-- Barra Superior -->		
-<div class="container-fluid">
-<nav class="nav-wrapper deep-purple darken-4">
-    <div class="row">
-    	<div class="col s2 m1 l2">
-     		<!-- Logo -->
-     		<a href="{{ url('TrasMel') }}" class="brand-logo">TrasMel</a>
-      	</div>
-      	<div class="col s8 m2 l8">
-      		<!-- Menu -->
-			<ul id="nav-mobile" class="hide-on-med-and-down">
-        		<li><a href="sass.html">Home</a></li>
-        		<li><a href="badges.html">--</a></li>
-        		<li><a href="collapsible.html">---</a></li>
-      		</ul>
-    	</div>
-      	<div class="col s2 m1 l2" aling="right">
-      		<!-- Sesion -->
-      		<ul class="right hide-on-med-and-down">
-      			<li>
-      				<a href="#">
-      					<i class="material-icons right">account_circle</i>
-      					Ingresar
-      				</a>
-      			</li>
-      		</ul>
-      	</div>
+  <!-- Page Preloder -->
+  <div id="preloder">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header section -->
+  <header class="header-section">
+    <div class="header-warp">
+      
+      <div class="header-bar-warp d-flex">
+        <!-- site logo -->
+        <a href="home.html" class="site-logo">
+          <img src="{{ asset('/img/logo.png') }}" alt="TrasMel">
+        </a>
+        <nav class="top-nav-area w-100">
+          <div class="user-panel">
+            <a href="">Ingresar</a> / <a href="">Registrarse</a>
+          </div>
+          <!-- Menu -->
+          <ul class="main-menu primary-menu">
+            <li><a href="{{ url('/TrasMel') }}">Inicio</a></li>
+            <li class="down">
+              <a href="games.html">Servicios</a>
+              <ul class="sub-menu">
+                <li><a href="game-single.html">Seguimiento</a></li>
+                <li><a href="game-single.html">TrasMel App</a></li>
+              </ul>
+            </li>
+            <li><a href="review.html">Opiniones</a></li>
+            <li><a href="blog.html">Noticias</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-</nav>
-</div>
+  </header>
+  <!-- Header section end -->
 
-<!-- Contenido -->
-<main class="container-fluid">
-	<br>
-	@yield('contenido')	
-	<br>
-</main>
+  <!-- Hero section -->
+  <section class="hero-section overflow-hidden">
+    <div class="hero-slider owl-carousel">
+      <div class="hero-item set-bg d-flex align-items-center justify-content-center text-center" data-setbg="{{ asset('img/slider-bg-1.jpg') }}">
+        <div class="container">
+          <h2>Nuevo Servicio!</h2>
+          <p>Nuestra plataforma a integrado el seguimiento de tu envio para que sepas donde esta, En Tiempo Real!!</p>
+          <a href="#" class="site-btn">Sigue Leyendo  <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></a>
+        </div>
+      </div>
+      <div class="hero-item set-bg d-flex align-items-center justify-content-center text-center" data-setbg="{{ asset('img/slider-bg-2.jpg') }}">
+        <div class="container">
+          <h2>TrasMel App!</h2>
+          <p>TrasMel abre su nueva plataforma Movil, para que siempre estes informado de tu envio.</p>
+          <a href="#" class="site-btn">Sigue Leyendo  <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></a>
+        </div>
+      </div>
+      <div class="hero-item set-bg d-flex align-items-center justify-content-center text-center" data-setbg="{{ asset('img/slider-bg-2.jpg') }}">
+        <div class="container">
+          <h2>TrasMel!</h2>
+          <p>TrasMel, Nueva empresa para el seguimiento de Encargos/Envios, para que siempre estes informado</p>
+          <a href="#" class="site-btn">Sigue Leyendo  <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero section end-->
 
-<!--Footer -->
-<footer class="page-footer deep-purple darken-4">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">TrasMel</h5>
-                <p class="grey-text text-lighten-4"></p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Redes Sociales</h5>
-                <ul>
-                  <li>
-                  	<a class="grey-text text-lighten-3" href="#!"><i class="material-icons left">drafts</i>Facebook</a></li>
-                  <li>
-                  	<a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">--</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">--</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2019 TrasMel. Todos los derechos reservados.
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
 
-<!-- Materileze JavaScript -->
-<script src="{{ asset('materialize.min.js') }}"></script>
-</body>
+  <section class="intro-section">
+  @yield('Contenido')
+  </section>
+  <!-- Intro section end -->
+
+
+
+  <!-- Footer section -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-left-pic">
+        <img src="{{ asset('img/footer-left-pic.png') }}" alt="">
+      </div>
+      <div class="footer-right-pic">
+        <img src="{{ asset('img/footer-right-pic.png') }}" alt="">
+      </div>
+      <a href="#" class="footer-logo">
+        <img src="{{ asset('./img/logo.png') }}" alt="">
+      </a>
+      <ul class="main-menu footer-menu">
+        <li><a href="">Inicio</a></li>
+        <li><a href="">Servicios</a></li>
+        <li><a href="">Opiniones</a></li>
+        <li><a href="">Noticias</a></li>
+        <li><a href="">Contacto</a></li>
+      </ul>
+      <div class="footer-social d-flex justify-content-center">
+        <a href="#"><i class="fa fa-pinterest"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-dribbble"></i></a>
+        <a href="#"><i class="fa fa-behance"></i></a>
+      </div>
+      <div class="copyright"><a href="">TrasMel</a> 2019 @ All rights reserved</div>
+    </div>
+  </footer>
+  <!-- Footer section end -->
+
+
+  <!--====== Javascripts & Jquery ======-->
+  <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.slicknav.min.js') }}"></script>
+  <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.sticky-sidebar.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
+
+  </body>
 </html>
