@@ -51,7 +51,7 @@
             <li class="down">
               <a href="games.html">Servicios</a>
               <ul class="sub-menu">
-                <li><a href="{{ url('TrasMel/Seguimientos') }}">Seguimiento</a></li>
+                <li><a href="game-single.html">Seguimiento</a></li>
                 <li><a href="game-single.html">TrasMel App</a></li>
               </ul>
             </li>
@@ -64,35 +64,6 @@
     </div>
   </header>
   <!-- Header section end -->
-
-  <!-- Hero section -->
-  <section class="hero-section overflow-hidden">
-    <div class="hero-slider owl-carousel">
-      <div class="hero-item set-bg d-flex align-items-center justify-content-center text-center" data-setbg="{{ asset('img/slider-bg-1.jpg') }}">
-        <div class="container">
-          <h2>Nuevo Servicio!</h2>
-          <p>Nuestra plataforma a integrado el seguimiento de tu envio para que sepas donde esta, En Tiempo Real!!</p>
-          <a href="#" class="site-btn">Sigue Leyendo  <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></a>
-        </div>
-      </div>
-      <div class="hero-item set-bg d-flex align-items-center justify-content-center text-center" data-setbg="{{ asset('img/slider-bg-2.jpg') }}">
-        <div class="container">
-          <h2>TrasMel App!</h2>
-          <p>TrasMel abre su nueva plataforma Movil, para que siempre estes informado de tu envio.</p>
-          <a href="#" class="site-btn">Sigue Leyendo  <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></a>
-        </div>
-      </div>
-      <div class="hero-item set-bg d-flex align-items-center justify-content-center text-center" data-setbg="{{ asset('img/slider-bg-2.jpg') }}">
-        <div class="container">
-          <h2>TrasMel!</h2>
-          <p>TrasMel, Nueva empresa para el seguimiento de Encargos/Envios, para que siempre estes informado</p>
-          <a href="#" class="site-btn">Sigue Leyendo  <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Hero section end-->
-
 
   <section class="intro-section">
   @yield('Contenido')
