@@ -22,6 +22,9 @@ Route::get('/TrasMel', function () {
 Route::get('/TrasMel/Seguimiento', function () {
     return view('TrasMel/Home/Seguimiento');
 });
+Route::get('/TrasMel/Contacto', function () {
+    return view('TrasMel/Home/contact');
+});
 
 Route::get('/Login',function(){
     return view('TrasMel/autentificacion/login');

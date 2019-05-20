@@ -49,15 +49,15 @@
           <ul class="main-menu primary-menu">
             <li><a href="{{ url('/TrasMel') }}">Inicio</a></li>
             <li class="down">
-              <a href="games.html">Servicios</a>
+              <a href="">Servicios</a>
               <ul class="sub-menu">
-                <li><a href="{{ url('TrasMel/Seguimientos') }}">Seguimiento</a></li>
+                <li><a href="{{ url('TrasMel/Seguimiento') }}">Seguimiento</a></li>
                 <li><a href="game-single.html">TrasMel App</a></li>
               </ul>
             </li>
             <li><a href="review.html">Opiniones</a></li>
             <li><a href="blog.html">Noticias</a></li>
-            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="{{ asset('TrasMel/Contacto') }}">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -91,9 +91,8 @@
       </div>
     </div>
   </section>
+
   <!-- Hero section end-->
-
-
   <section class="intro-section">
   @yield('Contenido')
   </section>
