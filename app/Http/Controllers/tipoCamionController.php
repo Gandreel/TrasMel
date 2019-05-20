@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Modelo\TipoCamion;
 
 class tipoCamionController extends Controller
 {
@@ -34,7 +35,11 @@ class tipoCamionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tipoCamion = new TipoCamion();
+        $tipoCamion->descripcion = $request['descripcionTipoCamion'];
+        $tipoCamion->save();
+
+
     }
 
     /**
