@@ -1059,12 +1059,12 @@ ol {
 .copyright {
 	font-size: 12px;
 	font-weight: 500;
-	color: #9190a5;
+	color: #fff;
 	opacity: 0.20;
 }
 
 .copyright a {
-	color: #9190a5;
+	color: #fff;
 }
 
 .copyright a:hover {

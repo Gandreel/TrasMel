@@ -12,10 +12,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+//TrasMel
 Route::get('/TrasMel', function () {
     return view('TrasMel/Home/Index');
 });
@@ -25,12 +22,27 @@ Route::get('/TrasMel/Seguimiento', function () {
 Route::get('/TrasMel/Contacto', function () {
     return view('TrasMel/Home/contact');
 });
+Route::get('/TrasMel/Noticias', function () {
+    return view('TrasMel/Home/noticias');
+});
 
 Route::get('/Login',function(){
     return view('TrasMel/autentificacion/login');
 });
 Route::get('/Registro',function(){
     return view('TrasMel/autentificacion/registro');
+});
+
+
+//Noticias
+Route::get('/TrasMel/Noticias/AppMovil', function () {
+    return view('TrasMel/Noticias/AppMovil');
+});
+Route::get('/TrasMel/Noticias/Seguimiento', function () {
+    return view('TrasMel/Noticias/Seguimiento');
+});
+Route::get('/TrasMel/Noticias/TrasMel', function () {
+    return view('TrasMel/Noticias/TrasMel');
 });
 
 //post

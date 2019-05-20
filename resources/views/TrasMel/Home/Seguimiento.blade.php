@@ -5,6 +5,7 @@
 	<section class="newsletter-section">
 		<div class="container">
 			<br>
+			<br>
 			<h2>Seguimiento por GPS</h2>
 			<form class="newsletter-form">
 				<input type="text" placeholder="NUMERO DE ENCARGGO">

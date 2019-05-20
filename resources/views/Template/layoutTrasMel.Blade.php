@@ -56,7 +56,7 @@
               </ul>
             </li>
             <li><a href="review.html">Opiniones</a></li>
-            <li><a href="blog.html">Noticias</a></li>
+            <li><a href="{{ asset('/TrasMel/Noticias') }}">Noticias</a></li>
             <li><a href="{{ asset('TrasMel/Contacto') }}">Contacto</a></li>
           </ul>
         </nav>
