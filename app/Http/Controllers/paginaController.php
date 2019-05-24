@@ -20,6 +20,30 @@ class paginaController extends Controller
         return view('TrasMel/Home/Seguimiento');
     }
 
+    public function noticias(){
+        return view('TrasMel/Home/Noticias');
+    }
+
+    public function servicios(){
+        return view('TrasMel/Home/Servicios');
+    }
+
+    public function contacto(){
+        return view('TrasMel/Home/Contacto');
+    }
+
+    public function noticia1(){
+        return view('TrasMel/Noticias/AppMovil');
+    }
+
+    public function noticia2(){
+        return view('TrasMel/Noticias/Noticias/Seguimiento');
+    }
+
+    public function noticia3(){
+        return view('TrasMel/Noticias/Noticias/TrasMel');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

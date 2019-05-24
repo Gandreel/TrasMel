@@ -46,21 +46,21 @@
         </a>
         <nav class="top-nav-area w-100">
           <div class="user-panel">
-            <a href="">Ingresar</a> / <a href="">Registrarse</a>
+            <a href="{{ url('Login') }}">Ingresar</a> / <a href="{{ url('Registro') }}">Registrarse</a>
           </div>
           <!-- Menu -->
           <ul class="main-menu primary-menu">
-            <li><a href="{{ url('/TrasMel') }}">Inicio</a></li>
+            <li><a href="{{ url('TrasMel') }}">Inicio</a></li>
             <li class="down">
               <a href="">Servicios</a>
               <ul class="sub-menu">
-                <li><a href="{{ url('TrasMel/Seguimiento') }}">Seguimiento</a></li>
+                <li><a href="{{ url('Seguimiento') }}">Seguimiento</a></li>
                 <li><a href="game-single.html">TrasMel App</a></li>
               </ul>
             </li>
             <li><a href="review.html">Opiniones</a></li>
-            <li><a href="{{ asset('/TrasMel/Noticias') }}">Noticias</a></li>
-            <li><a href="{{ asset('TrasMel/Contacto') }}">Contacto</a></li>
+            <li><a href="{{ url('Noticias') }}">Noticias</a></li>
+            <li><a href="{{ url('Contacto') }}">Contacto</a></li>
           </ul>
         </nav>
       </div>

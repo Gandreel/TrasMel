@@ -28,34 +28,34 @@
 					<div class="big-blog-item">
 						<img src="{{ asset('img/blog-big/1.jpg') }}" alt="#" class="blog-thumbnail">
 						<div class="blog-content text-box text-white">
-							<div class="top-meta">16.05.2019  /  in <a href="">Noticias</a></div>
+							<div class="top-meta">24/05/2019  / <a href="">Noticias</a></div>
 							<h3>Trasmel Lanza su Aplicacion Movil</h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
-							<a href="{{ url('TrasMel/Noticias/AppMovil') }}" class="read-more">Read More <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></a>
+							<p>Durante la feria de desarrollo e innovación, la empresa TrasMel anunció el lanzamiento de su nuevo aplicación, llamada de la misma manera que la empresa, en una entrevista con el director de desarrollo, Cristopher Escobar, nos dijo "Nuestra aplicación está enfocada a que el cliente pueda obtener el seguimiento de su encomienda en tiempo real"...</p>
+							<a href="{{ url('AppMovil') }}" class="read-more">Siga Leyendo <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></a>
 						</div>
 					</div>
 					<div class="big-blog-item">
 						<img src="{{ asset('img/blog-big/2.jpg') }}" alt="#" class="blog-thumbnail">
 						<div class="blog-content text-box text-white">
-							<div class="top-meta">11.11.18  /  in <a href="">Noticias</a></div>
-							<h3>The best online game is out now!</h3>
+							<div class="top-meta">20/03/2019  / <a href="">Noticias</a></div>
+							<h3>TrasMel anuncia que está desarrollando una Aplicación Movil</h3>
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
-							<a href="#" class="read-more">Read More <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></a>
+							<a href="#" class="read-more">Siga Leyendo <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></a>
 						</div>
 					</div>
 					<div class="big-blog-item">
 						<img src="{{ asset('img/blog-big/3.jpg') }}" alt="#" class="blog-thumbnail">
 						<div class="blog-content text-box text-white">
-							<div class="top-meta">11.11.18  /  in <a href="">Noticias</a></div>
+							<div class="top-meta">11.11.18  / <a href="">Noticias</a></div>
 							<h3>The best online game is out now!</h3>
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
-							<a href="#" class="read-more">Read More <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></a>
+							<a href="#" class="read-more">Siga Leyendo <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></a>
 						</div>
 					</div>
 					<div class="site-pagination">
-						<a href="#" class="active">01.</a>
-						<a href="#">02.</a>
-						<a href="#">03.</a>
+						<a href="{{ url('AppMovil') }}" class="active">01.</a>
+						<a href="{{ url('Seguimientos') }}">02.</a>
+						<a href="{{ url('Trasmel') }}">03.</a>
 					</div>
 				</div>
 				<div class="col-xl-3 col-lg-4 col-md-5 sidebar">

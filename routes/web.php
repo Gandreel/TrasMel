@@ -17,9 +17,17 @@ Route::get('/', function () {
 });
 
 Route::get('TrasMel','paginaController@index');
-Route::get('Registro','usuarioController@index');
 Route::get('Seguimiento','paginaController@seguimiento');
+Route::get('Noticias', 'paginaController@noticias');
+Route::get('Servicios', 'paginaController@servicios');
+Route::get('Contacto', 'paginaController@contacto');
+//Noticias
+Route::get('AppMovil', 'paginaController@noticia1');
+Route::get('Seguimientos', 'paginaController@noticia2');
+Route::get('Trasmel', 'paginaController@noticia3');
 
+Route::get('Login', 'usuarioController@login');
+Route::get('Registro', 'usuarioController@registro');
 /*
 
 Route::get('Login','TrasMel/autentificacion/login');

@@ -19,6 +19,16 @@ class usuarioController extends Controller
         return view('TrasMel/autentificacion/registro1');
     }
 
+    public function login()
+    {
+        return view('TrasMel/autentificacion/login1');
+    }
+
+    public function registro()
+    {
+        return view('TrasMel/autentificacion/registro1');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
