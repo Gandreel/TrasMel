@@ -12,46 +12,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//TrasMel
-Route::get('/TrasMel', function () {
-    return view('TrasMel/Home/Index');
-});
-Route::get('/TrasMel/Seguimiento', function () {
-    return view('TrasMel/Home/Seguimiento');
-});
-Route::get('/TrasMel/Contacto', function () {
-    return view('TrasMel/Home/contact');
-});
-Route::get('/TrasMel/Noticias', function () {
-    return view('TrasMel/Home/noticias');
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('/Login',function(){
-    return view('TrasMel/autentificacion/login');
-});
-Route::get('/Registro',function(){
-    return view('TrasMel/autentificacion/registro');
-});
+Route::get('TrasMel','paginaController@index');
+Route::get('Registro','usuarioController@index');
+Route::get('Seguimiento','paginaController@seguimiento');
+
+/*
+
+Route::get('Login','TrasMel/autentificacion/login');
+
+Route::get('Log', 'TrasMel/autentificacion/login1');
+Route::get('Registro','TrasMel/Autentificacion/registro');
 
 
-//Noticias
-Route::get('/TrasMel/Noticias/AppMovil', function () {
-    return view('TrasMel/Noticias/AppMovil');
-});
-Route::get('/TrasMel/Noticias/Seguimiento', function () {
-    return view('TrasMel/Noticias/Seguimiento');
-});
-Route::get('/TrasMel/Noticias/TrasMel', function () {
-    return view('TrasMel/Noticias/TrasMel');
-});
+*/
+
 
 //post
-Route::post('loger', 'usuarioController@store' );
+Route::post('reg', 'usuarioController@store' );
 
-Route::post('user/profile', 'usuarioController@store')->name('profile');
+/*Route::post('user/profile', 'usuarioController@store')->name('profile');
 
 
 Route::post('user/profile', 'UserProfileController@show')->name('profile');
 
-
+Route::post('user/profile', 'UserProfileController@show')->name('profile');
+*/
 

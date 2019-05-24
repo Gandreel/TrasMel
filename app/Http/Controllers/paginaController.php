@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Modelo\Usuario;
-
-
 use Illuminate\Http\Request;
 
-class usuarioController extends Controller
+class paginaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +13,11 @@ class usuarioController extends Controller
      */
     public function index()
     {
-        return view('TrasMel/autentificacion/registro1');
+        return view('TrasMel/Home/index');
+    }
+
+    public function seguimiento(){
+        return view('TrasMel/Home/Seguimiento');
     }
 
     /**
@@ -37,19 +38,7 @@ class usuarioController extends Controller
      */
     public function store(Request $request)
     {
-        $usu = new Usuario();
-        $usu->nick = $request['nick'];
-        $usu->pass = $request['pass'];
-        $usu->correo = $request['correo'];
-        $usu->idPersona = $request['idPersona'];
-        $usu->categoria = $request['categoria'];
-        $usu->save();
-
-        $mensaje = "Usuario creado exitosamente";
-        return view('TrasMel/autentificacion/login', compact("mensaje"));
-
-
-
+        //
     }
 
     /**

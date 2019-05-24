@@ -6,7 +6,7 @@
   <meta name="description" content="TrasMel">
   <meta name="keywords" content="TrasMel,Trasporte,Encargo">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- Favicon -->
   <link href="{{ asset('img/favicon.ico') }}" rel="shortcut icon"/>
 
@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}"/>
   <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}"/>
   <link rel="stylesheet" href="{{ asset('css/animate.css') }}"/>
+
+  <!--registro-->
+  <link href="{{asset('css/log.css')}}" rel="stylesheet" type="text/css" media="all" />
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
@@ -35,7 +38,7 @@
   <!-- Header section -->
   <header class="header-section">
     <div class="header-warp">
-      
+
       <div class="header-bar-warp d-flex">
         <!-- site logo -->
         <a href="home.html" class="site-logo">
