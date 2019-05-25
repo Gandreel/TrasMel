@@ -47,7 +47,7 @@
                           </ul>
                         </li>
                         <li><a href="review.html">Opiniones</a></li>
-                        <li><a href="{{ url('Home/Noticias') }}">Noticias</a></li>
+                        <li><a href="{{ url('Noticias') }}">Noticias</a></li>
                         <li><a href="{{ url('Contacto') }}">Contacto</a></li>
                       </ul>
                     </nav>
@@ -72,12 +72,18 @@
             <input type="password" name="pass" placeholder="Password" required="required" />
             <input type="text" name="correo" placeholder="Email" required="required" />
             <input type="text" name="idPersona" placeholder="Rut" required="required" />
-            <input type="text" name="categoria" placeholder="Sección" required="required" />
+            <select  name="categoria" required="requided">
+                <option value="">Seleccione...</option>
+                <option value="Administrador">Administrador</option>
+                <option value="Cliente" selected>Cliente</option>
+                <option value="Trasportista">Transportista</option>
+              </select>
 
 
             <button type="submit" class="btn btn-primary btn-block btn-large">Registrar</button>
             <input type="hidden" name="_token" value="{{csrf_token()}}"/>
         </form>
     </div>
+
 </body>
 </html>
