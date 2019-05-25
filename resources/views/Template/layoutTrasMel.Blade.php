@@ -14,18 +14,15 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
-  <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}"/>
-  <link rel="stylesheet" href="{{ asset('css/slicknav.min.css') }}"/>
-  <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}"/>
-  <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}"/>
-  <link rel="stylesheet" href="{{ asset('css/animate.css') }}"/>
-
-  <!--registro-->
-  <link href="{{asset('css/log.css')}}" rel="stylesheet" type="text/css" media="all" />
+  <link rel="stylesheet" href="{{ asset('Home/css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('home/css/font-awesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('Home/css/slicknav.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('Home/css/owl.carousel.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('Home/css/magnific-popup.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('Homecss/animate.css') }}"/>
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('Home/css/style.css') }}"/>
 
 
 </head>
