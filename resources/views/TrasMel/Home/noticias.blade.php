@@ -2,9 +2,10 @@
 @section('Contenido')
 
 	<!-- Page top section -->
-	<section class="page-top-section set-bg" data-setbg="{{ asset('img/page-top-bg/3.jpg') }}">
+	<section class="page-top-section set-bg" data-setbg="{{ asset('img/page-top-bg/banner3.png') }}">
 		<div class="page-info">
-			<h2>Noticias</h2>
+            <br><br>
+            <h2>&nbsp &nbsp&nbsp&nbsp&nbsp&nbspNoticias</h2>
 			<div class="site-breadcrumb">
 				<a href="{{ asset('TrasMel') }}">Inicio</a>  /
 				<span>Noticias</span>
@@ -26,7 +27,7 @@
 						<li><a href="#">Premios</a></li>
 					</ul>
 					<div class="big-blog-item">
-						<img src="{{ asset('img/blog-big/1.jpg') }}" alt="#" class="blog-thumbnail">
+						<img src="{{ asset('img/blog-big/app.png') }}" alt="#" class="blog-thumbnail">
 						<div class="blog-content text-box text-white">
 							<div class="top-meta">24/05/2019  / <a href="">Noticias</a></div>
 							<h3>Trasmel Lanza su Aplicacion Movil</h3>

@@ -2,13 +2,13 @@
 @section('Contenido')
 
 	<!-- Page top section -->
-	<section class="page-top-section set-bg" data-setbg="{{ asset('img/page-top-bg/4.jpg') }}">
+	<section class="page-top-section set-bg" data-setbg="{{ asset('img/page-top-bg/banner2.png') }}">
 		<div class="page-info">
-			<h2>Contacto</h2>
+			<!--<h2>Contacto</h2>
 			<div class="site-breadcrumb">
 				<a href="{{ url('TrasMel') }}">Inicio</a>  /
 				<span>Contacto</span>
-			</div>
+			</div>-->
 		</div>
 	</section>
 	<!-- Page top end-->
@@ -30,7 +30,7 @@
 				<div class="col-lg-5 order-1 order-lg-2 contact-text text-white">
 					<h3>Contáctese con Nosotros</h3>
 					<p>
-					Estimado cliente, para realizar cualquier tipo de consulta respecto a nuestros servicios, 
+					Estimado cliente, para realizar cualquier tipo de consulta respecto a nuestros servicios,
 					cobertura, consulta de su encomienda o cualquier otra gestión, por favor indicar en asunto.
 					</p>
 					<div class="cont-info">
