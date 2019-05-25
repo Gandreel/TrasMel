@@ -8,21 +8,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicon -->
-  <link href="{{ asset('img/favicon.ico') }}" rel="shortcut icon"/>
+  <link href="{{ asset('Home/img/favicon.ico') }}" rel="shortcut icon"/>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
-  <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}"/>
-  <link rel="stylesheet" href="{{ asset('css/slicknav.min.css') }}"/>
-  <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}"/>
-  <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}"/>
-  <link rel="stylesheet" href="{{ asset('css/animate.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('Home/css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('Home/css/font-awesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('Home/css/slicknav.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('Home/css/owl.carousel.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('Home/css/magnific-popup.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('Home/css/animate.css') }}"/>
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('Home/css/style.css') }}"/>
 
 
 </head>
@@ -39,7 +39,7 @@
       <div class="header-bar-warp d-flex">
         <!-- site logo -->
         <a href="home.html" class="site-logo">
-          <img src="{{ asset('/img/logo.png') }}" alt="TrasMel">
+          <img src="{{ asset('Home/img/logo.png') }}" alt="TrasMel">
         </a>
         <nav class="top-nav-area w-100">
           <div class="user-panel">
@@ -74,7 +74,7 @@
   <footer class="footer-section">
     <div class="container">
       <a href="#" class="footer-logo">
-        <img src="{{ asset('./img/logo.png') }}" alt="">
+        <img src="{{ asset('Home/img/logo.png') }}" alt="">
       </a>
       <ul class="main-menu footer-menu">
         <li><a href="{{ url('TrasMel') }}">Inicio</a></li>
@@ -97,13 +97,13 @@
 
 
   <!--====== Javascripts & Jquery ======-->
-  <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
-  <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-  <script src="{{ asset('js/jquery.slicknav.min.js') }}"></script>
-  <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-  <script src="{{ asset('js/jquery.sticky-sidebar.min.js') }}"></script>
-  <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
-  <script src="{{ asset('js/main.js') }}"></script>
+  <script src="{{ asset('Home/js/jquery-3.2.1.min.js') }}"></script>
+  <script src="{{ asset('Home/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('Home/js/jquery.slicknav.min.js') }}"></script>
+  <script src="{{ asset('Home/js/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('Home/js/jquery.sticky-sidebar.min.js') }}"></script>
+  <script src="{{ asset('Home/js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ asset('Home/js/main.js') }}"></script>
 
   </body>
 </html>

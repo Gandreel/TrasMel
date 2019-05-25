@@ -2,7 +2,7 @@
 @section('Contenido')
 
 	<!-- Page top section -->
-	<section class="page-top-section set-bg" data-setbg="{{ asset('img/page-top-bg/1.jpg') }}">
+	<section class="page-top-section set-bg" data-setbg="{{ asset('Home/img/page-top-bg/1.jpg') }}">
 		<div class="page-info">
 			<h2>Games</h2>
 			<div class="site-breadcrumb">
@@ -19,7 +19,7 @@
 	<section class="games-single-page">
 		<div class="container">
 			<div class="game-single-preview">
-				<img src="{{ asset('img/games/big.jpg') }}" alt="">
+				<img src="{{ asset('Home/img/games/big.jpg') }}" alt="">
 			</div>
 			<div class="row">
 				<div class="col-xl-9 col-lg-8 col-md-7 game-single-content">
@@ -74,7 +74,7 @@
 
 	<section class="game-author-section">
 		<div class="container">
-			<div class="game-author-pic set-bg" data-setbg="{{ asset('img/author.jpg') }}"></div>
+			<div class="game-author-pic set-bg" data-setbg="{{ asset('Home/img/author.jpg') }}"></div>
 			<div class="game-author-info">
 				<h4>Written by: Michael Williams</h4>
 				<p>Vivamus volutpat nibh ac sollicitudin imperdiet. Donec scelerisque lorem sodales odio ultricies, nec rhoncus ex lobortis. Vivamus tincid-unt sit amet sem id varius. Donec elementum aliquet tortor. Curabitur justo mi, efficitur sed eros alique.</p>
@@ -89,7 +89,7 @@
 			<h2>Suscríbete para recibir nuestras últimas noticias</h2>
 			<form class="newsletter-form">
 				<input type="text" placeholder="Ingrese su E-Mail">
-				<button class="site-btn">subscrir <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></button>
+				<button class="site-btn">subscrir <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></button>
 			</form>
 		</div>
 	</section>

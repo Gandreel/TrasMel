@@ -9,7 +9,7 @@
 			<h2>Seguimiento por GPS</h2>
 			<form class="newsletter-form">
 				<input type="text" placeholder="NUMERO DE ENCARGGO">
-				<button class="site-btn">Buscar <img src="{{ asset('img/icons/double-arrow.png') }}" alt="#"/></button>
+				<button class="site-btn">Buscar <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></button>
 			</form>
 		</div>
 	</section>
