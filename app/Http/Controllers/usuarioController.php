@@ -67,6 +67,7 @@ class usuarioController extends Controller
                     return view('TrasMel/autentificacion/registro1', compact("mensaje"));
                 }
              }
+
         $usu->save();
 
         $mensaje = "Usuario creado exitosamente";

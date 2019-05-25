@@ -4,11 +4,11 @@
 	<!-- Page top section -->
 	<section class="page-top-section set-bg" data-setbg="{{ asset('img/page-top-bg/banner2.png') }}">
 		<div class="page-info">
-			<!--<h2>Contacto</h2>
+            <br><br><br><br><br>
 			<div class="site-breadcrumb">
 				<a href="{{ url('TrasMel') }}">Inicio</a>  /
 				<span>Contacto</span>
-			</div>-->
+			</div>
 		</div>
 	</section>
 	<!-- Page top end-->
