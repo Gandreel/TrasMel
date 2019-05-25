@@ -21,12 +21,14 @@ class usuarioController extends Controller
 
     public function login()
     {
-        return view('TrasMel/autentificacion/login1');
+        $mensaje = null;
+        return view('TrasMel/autentificacion/login1', compact('mensaje'));
     }
 
     public function registro()
     {
-        return view('TrasMel/autentificacion/registro1');
+        $mensaje = null;
+        return view('TrasMel/autentificacion/registro1', compact('mensaje'));
     }
 
     /**
@@ -47,16 +49,32 @@ class usuarioController extends Controller
      */
     public function store(Request $request)
     {
+        try {
+
         $usu = new Usuario();
         $usu->nick = $request['nick'];
         $usu->pass = $request['pass'];
         $usu->correo = $request['correo'];
         $usu->idPersona = $request['idPersona'];
         $usu->categoria = $request['categoria'];
+        $nombre =$request['nick'];
+
+        //validar que nombre de usuario sea unico
+        $valida = Usuario::all();
+             foreach($valida as $val){
+                if($val->nick == $nombre){
+                    $mensaje = 'Usuario ya existente';
+                    return view('TrasMel/autentificacion/registro1', compact("mensaje"));
+                }
+             }
         $usu->save();
 
         $mensaje = "Usuario creado exitosamente";
-        return view('TrasMel/autentificacion/login', compact("mensaje"));
+        return view('TrasMel/autentificacion/login1', compact("mensaje"));
+        } catch (Exception $e){
+            $mensaje = "error al Registrar";
+            return view('TrasMel/autentificacion/login1', compact("mensaje"));
+        }
 
 
 

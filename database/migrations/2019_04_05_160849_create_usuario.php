@@ -15,7 +15,7 @@ class CreateUsuario extends Migration
     {
         Schema::create('usuario', function (Blueprint $table) {
             $table->integer('idUsuario')->autoIncrement();
-            $table->string('nick');
+            $table->string('nick',30)->unique();
             $table->string('pass');
             $table->string('correo');
             $table->bigInteger('idPersona');

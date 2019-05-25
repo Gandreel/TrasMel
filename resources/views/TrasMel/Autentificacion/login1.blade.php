@@ -22,7 +22,7 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
 
-    
+
 
 </head>
 <body>
@@ -61,6 +61,15 @@
 
     <div class="login">
         <h1>Login</h1>
+        <div>
+        @if($mensaje !=null)
+        <div class="col-12">
+          <div class="alert alert-success" role="alert">
+            {{ $mensaje }}
+          </div>
+        </div>
+        @endif
+      </div>
         <form method="post">
             <input type="text" name="u" placeholder="Username" required="required" />
             <input type="password" name="p" placeholder="Password" required="required" />

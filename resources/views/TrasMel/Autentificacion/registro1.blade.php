@@ -58,6 +58,15 @@
 
     <div class="login">
         <h1>Registro</h1>
+        <div>
+            @if($mensaje !=null)
+            <div class="col-12">
+              <div class="alert alert-success" role="alert">
+                {{ $mensaje }}
+              </div>
+            </div>
+            @endif
+          </div>
         <form action="{{URL::to('reg')}}" method="post">
             <input type="text" name="nick" placeholder="Nickname" required="required" />
             <input type="password" name="pass" placeholder="Password" required="required" />
