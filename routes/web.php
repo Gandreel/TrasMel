@@ -16,6 +16,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/adm', function () {
+    return view('TrasMel.ADM.index');
+});
+Route::get('/Personal', function () {
+    return view('TrasMel.ADM.Personal');
+});
+Route::get('/Personal/Editar', function () {
+    return view('TrasMel.ADM.EditarUsuario');
+});
+
+
 Route::get('TrasMel','paginaController@index');
 Route::get('Seguimiento','paginaController@seguimiento');
 Route::get('Noticias', 'paginaController@noticias');
