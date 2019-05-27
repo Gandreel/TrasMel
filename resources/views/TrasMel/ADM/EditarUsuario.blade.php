@@ -7,24 +7,12 @@
 	</div>
 	<div class="card-body card-block">
 		<form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-			
-			<div class="row form-group">
-				<div class="col col-md-3">
-					<label class=" form-control-label">Avatar</label>
-				</div>
-				<div class="col-3 col-md-2">
-                <img src="{{ asset('Admin/images/icon/avatar-01.jpg') }}" alt="John Doe" />
-				</div>
-				<div class="col-5 col-md-5">
-					<input type="file" id="file-input" name="file-input" class="form-control-file">
-				</div>
-			</div>
 			<div class="row form-group">
 				<div class="col col-md-3">
 					<label class=" form-control-label">Rut</label>
 				</div>
-				<div class="col-4 col-md-3">
-                <input type="text" class=" form-control" name="id" value="" placeholder="1111111-1">
+				<div class="col-12 col-md-9">
+                <input type="text" class=" form-control" name="id" value="{{ $usuario->idUsuario }}">
 				</div>
 			</div>
 			<div class="row form-group">
@@ -32,7 +20,7 @@
 					<label for="text-input" class=" form-control-label">Nombre</label>
 				</div>
 				<div class="col-12 col-md-9">
-					<input type="text" id="text-input" name="text-input" placeholder="Nombres" class="form-control">
+					<input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
 				</div>
 			</div>
 			<div class="row form-group">
@@ -40,7 +28,7 @@
 					<label for="email-input" class=" form-control-label">Apellido Paterno</label>
 				</div>
 				<div class="col-12 col-md-9">
-					<input type="text" id="text-input" name="text-input" placeholder="Apellido Paterno" class="form-control">
+					<input type="email" id="email-input" name="email-input" placeholder="Enter Email" class="form-control">
 				</div>
 			</div>
 			<div class="row form-group">
@@ -48,64 +36,189 @@
 					<label for="email-input" class=" form-control-label">Apellido Materno</label>
 				</div>
 				<div class="col-12 col-md-9">
-					<input type="text" id="text-input" name="text-input" placeholder="Apellido Materno" class="form-control">
-				</div>
-			</div>
-			<div class="row form-group">
-				<div class="col col-md-3">
-					<label for="email-input" class=" form-control-label">E-Mail</label>
-				</div>
-				<div class="col-12 col-md-9">
-					<input type="email" id="email-input" name="email-input" placeholder="E-Mail" class="form-control">
-				</div>
-			</div>
-			<div class="row form-group">
-				<div class="col col-md-3">
-					<label for="email-input" class=" form-control-label">Fono</label>
-				</div>
-				<div class="col-12 col-md-9">
-					<input type="text" id="text-input" name="text-input" placeholder="+56987456325" class="form-control">
-				</div>
-			</div>
-			<div class="row form-group">
-				<div class="col col-md-3">
-					<label for="email-input" class=" form-control-label">Direccion</label>
-				</div>
-				<div class="col-12 col-md-9">
-					<input type="text" id="text-input" name="text-input" placeholder="Las Ágatas 405, Viña del Mar, Viña del Mar, Chile" class="form-control">
+					<input type="email" id="email-input" name="email-input" placeholder="Enter Email" class="form-control">
 				</div>
 			</div>
 			<div class="row form-group">
 				<div class="col col-md-3">
 					<label for="select" class=" form-control-label">Tipo de Usuario</label>
 				</div>
-				<div class="col-5 col-md-4">
+				<div class="col-12 col-md-9">
 					<select name="select" id="select" class="form-control">
-						<option value="0">Seleccione</option>
-						<option value="1">Conductor</option>
-						<option value="2">Pioneta</option>
-						<option value="3">Administrador</option>
+						<option value="0">Conductor</option>
+						<option value="1">Pioneta</option>
+						<option value="2">Administrador</option>
 					</select>
 				</div>
-				<div class="col col-md-1">
-					<label for="select" class=" form-control-label">Estado</label>
+			</div>
+			<div class="row form-group">
+				<div class="col col-md-3">
+					<label for="selectLg" class=" form-control-label">Select Large</label>
 				</div>
-				<div class="col-5 col-md-4">
-					<select name="select" id="select" class="form-control">
-						<option value="0">Seleccione</option>
-						<option value="1">Activo</option>
-						<option value="2">Inactivo</option>
+				<div class="col-12 col-md-9">
+					<select name="selectLg" id="selectLg" class="form-control-lg form-control">
+						<option value="0">Please select</option>
+						<option value="1">Option #1</option>
+						<option value="2">Option #2</option>
+						<option value="3">Option #3</option>
 					</select>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col col-md-3">
+					<label for="selectSm" class=" form-control-label">Select Small</label>
+				</div>
+				<div class="col-12 col-md-9">
+					<select name="selectSm" id="SelectLm" class="form-control-sm form-control">
+						<option value="0">Please select</option>
+						<option value="1">Option #1</option>
+						<option value="2">Option #2</option>
+						<option value="3">Option #3</option>
+						<option value="4">Option #4</option>
+						<option value="5">Option #5</option>
+					</select>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col col-md-3">
+					<label for="disabledSelect" class=" form-control-label">Disabled Select</label>
+				</div>
+				<div class="col-12 col-md-9">
+					<select name="disabledSelect" id="disabledSelect" disabled="" class="form-control">
+						<option value="0">Please select</option>
+						<option value="1">Option #1</option>
+						<option value="2">Option #2</option>
+						<option value="3">Option #3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col col-md-3">
+					<label for="multiple-select" class=" form-control-label">Multiple select</label>
+				</div>
+				<div class="col col-md-9">
+					<select name="multiple-select" id="multiple-select" multiple="" class="form-control">
+						<option value="1">Option #1</option>
+						<option value="2">Option #2</option>
+						<option value="3">Option #3</option>
+						<option value="4">Option #4</option>
+						<option value="5">Option #5</option>
+						<option value="6">Option #6</option>
+						<option value="7">Option #7</option>
+						<option value="8">Option #8</option>
+						<option value="9">Option #9</option>
+						<option value="10">Option #10</option>
+					</select>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col col-md-3">
+					<label class=" form-control-label">Radios</label>
+				</div>
+				<div class="col col-md-9">
+					<div class="form-check">
+						<div class="radio">
+							<label for="radio1" class="form-check-label ">
+								<input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Option 1
+							</label>
+						</div>
+						<div class="radio">
+							<label for="radio2" class="form-check-label ">
+								<input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Option 2
+							</label>
+						</div>
+						<div class="radio">
+							<label for="radio3" class="form-check-label ">
+								<input type="radio" id="radio3" name="radios" value="option3" class="form-check-input">Option 3
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col col-md-3">
+					<label class=" form-control-label">Inline Radios</label>
+				</div>
+				<div class="col col-md-9">
+					<div class="form-check-inline form-check">
+						<label for="inline-radio1" class="form-check-label ">
+							<input type="radio" id="inline-radio1" name="inline-radios" value="option1" class="form-check-input">One
+						</label>
+						<label for="inline-radio2" class="form-check-label ">
+							<input type="radio" id="inline-radio2" name="inline-radios" value="option2" class="form-check-input">Two
+						</label>
+						<label for="inline-radio3" class="form-check-label ">
+							<input type="radio" id="inline-radio3" name="inline-radios" value="option3" class="form-check-input">Three
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col col-md-3">
+					<label class=" form-control-label">Checkboxes</label>
+				</div>
+				<div class="col col-md-9">
+					<div class="form-check">
+						<div class="checkbox">
+							<label for="checkbox1" class="form-check-label ">
+								<input type="checkbox" id="checkbox1" name="checkbox1" value="option1" class="form-check-input">Option 1
+							</label>
+						</div>
+						<div class="checkbox">
+							<label for="checkbox2" class="form-check-label ">
+								<input type="checkbox" id="checkbox2" name="checkbox2" value="option2" class="form-check-input"> Option 2
+							</label>
+						</div>
+						<div class="checkbox">
+							<label for="checkbox3" class="form-check-label ">
+								<input type="checkbox" id="checkbox3" name="checkbox3" value="option3" class="form-check-input"> Option 3
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col col-md-3">
+					<label class=" form-control-label">Inline Checkboxes</label>
+				</div>
+				<div class="col col-md-9">
+					<div class="form-check-inline form-check">
+						<label for="inline-checkbox1" class="form-check-label ">
+							<input type="checkbox" id="inline-checkbox1" name="inline-checkbox1" value="option1" class="form-check-input">One
+						</label>
+						<label for="inline-checkbox2" class="form-check-label ">
+							<input type="checkbox" id="inline-checkbox2" name="inline-checkbox2" value="option2" class="form-check-input">Two
+						</label>
+						<label for="inline-checkbox3" class="form-check-label ">
+							<input type="checkbox" id="inline-checkbox3" name="inline-checkbox3" value="option3" class="form-check-input">Three
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col col-md-3">
+					<label for="file-input" class=" form-control-label">File input</label>
+				</div>
+				<div class="col-12 col-md-9">
+					<input type="file" id="file-input" name="file-input" class="form-control-file">
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col col-md-3">
+					<label for="file-multiple-input" class=" form-control-label">Multiple File input</label>
+				</div>
+				<div class="col-12 col-md-9">
+					<input type="file" id="file-multiple-input" name="file-multiple-input" multiple="" class="form-control-file">
 				</div>
 			</div>
 		</form>
 	</div>
 	<div class="card-footer">
 		<button type="submit" class="btn btn-primary btn-sm">
-			<i class="fa fa-dot-circle-o"></i> Guardar
+			<i class="fa fa-dot-circle-o"></i> Submit
 		</button>
 		<button type="reset" class="btn btn-danger btn-sm">
-			<i class="fa fa-ban"></i> Cancelar
+			<i class="fa fa-ban"></i> Reset
 		</button>
 	</div>
 </div>
