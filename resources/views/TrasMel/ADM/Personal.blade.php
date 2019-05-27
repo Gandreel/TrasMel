@@ -47,51 +47,59 @@
 							<th>Rut</th>
 							<th>Nombre</th>
 							<th>Apellidos</th>
+							<th>E-Mail</th>
 							<th>Fono</th>
 							<th>Tipo</th>
-							<th>Estado</th>
 							<th></th>
 						</tr>
 					</thead>
 					<tbody>
-						 <form action="{{ url('EditarPersonal') }}" method="post">
-                                    @foreach ($usuarios as $usu)
-                                            <tr>
-                                            	<th><label class="au-checkbox">
-									<input type="checkbox">
-									<span class="au-checkmark"></span>
-								</label></th>
-                                                <td>{{ $usu['rut'] }}</td>
-                                                <td>{{ $usu['nombre'] }}</td>
-                                                <td>{{ $usu['apellidos'] }}</td>
-                                                <td>{{ $usu['fono'] }}</td>
-                                                <td> @if ( $usu['categoria']  == 1)
-                                                    Administrador
+						@foreach ($usuarios as $usu)
+						<form action="{{ url('EditarPersonal') }}" method="post">
+							<tr class="spacer"></tr>
+							<tr>
+								<td>
+									<label class="au-checkbox">
+										<input type="checkbox">
+										<span class="au-checkmark"></span>
+									</label>
+								</td>
+								<td>{{ $usu['rut'] }}</td>
+								<td>{{ $usu['nombre'] }}</td>
+								<td>{{ $usu['apellidos'] }}</td>
+								<td>{{ $usu['email'] }}</td>
+								<td>{{ $usu['fono'] }}</td>
+								<td> 
+									@if ( $usu['categoria']  == 1)
+									<span class="role admin">Administrador</span>
+									@elseif ($usu['categoria']  == 2)
+									<span class="role member">Cliente</span>
+									@else
+									<span class="role user">Chofer</span>
+									@endif
+								</td>
+								<td class="text-right">
+									<div class="table-data-feature">
+										<button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+											<i class="zmdi zmdi-edit"></i>
+										</button>
+										<input type="hidden" name="id" class="btn btn-danger" value="{{ $usu['rut'] }}">
+										<input type="hidden" name="_token" value="{{csrf_token()}}" />
 
-                                                @elseif ($usu['categoria']  == 2)
-                                                    echo Cliente;
-                                                @else
-                                                echo Transportista;
-
-                                                @endif </td>
-
-                                                <td class="text-right">
-                                                        <div class="table-data-feature">
-                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
-                                                                <i class="zmdi zmdi-edit"></i>
-                                                            </button>
-                                                            <input type="hidden" name="id" class="btn btn-danger" value="{{ $usu['rut'] }}">
-                                                            <input type="hidden" name="_token" value="{{csrf_token()}}" />
-
-                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Eliminar">
-                                                                <i class="zmdi zmdi-delete"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                            </tr>
-                                            @csrf
-                                        </form>
-                                        @endforeach
-
-
+										<button class="item" data-toggle="tooltip" data-placement="top" title="Eliminar">
+											<i class="zmdi zmdi-delete"></i>
+										</button>
+									</div>
+								</td>
+							</tr>
+							@csrf
+						</form>
+						@endforeach
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>	
+						
 @endsection

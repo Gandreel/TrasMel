@@ -4480,6 +4480,8 @@ section {
 .table-data2 {
     border-collapse: collapse;
     overflow: visible;
+    margin-right: 15%;
+    margin-left: -2%;
 }
     
 .table-data2.table thead th {
