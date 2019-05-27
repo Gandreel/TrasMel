@@ -6,16 +6,17 @@
 		<table class="table table-borderless table-striped table-earning">
 			<thead>
 				<tr>
-					<th>Rut</th>
-					<th>Nombre</th>
-					<th>Apellidos</th>
-					<th class="text-center">Tipo</th>
-					<th class="text-right">Estado</th>
+					<th>Id</th>
+					<th>NickName</th>
+                    <th>Contraseña</th>
+                    <th>Email</th>
+                    <th>IdPersonal</th>
+					<th class="text-center">Categoria</th>
 					<th class="text-right">Opciones</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
+			<!--	<tr>
 					<td>8.548.596-5</td>
 					<td>Alan</td>
 					<td>Brito Delgado</td>
@@ -33,9 +34,37 @@
 							</button>
 						</div>
 					</td>
-				</tr>
-				<tr>
-					<form method="{{ url('/Personal/Editar') }}">
+                </tr>-->
+                <form action="{{ url('EditarPersonal') }}" method="post">
+                @foreach ($usuarios as $usu)
+                        <tr>
+                            <td>{{ $usu['idUsuario'] }}</td>
+                            <td>{{ $usu['nick'] }}</td>
+                            <td>{{ $usu['pass'] }}</td>
+                            <td>{{ $usu['correo'] }}</td>
+                            <td>{{ $usu['idPersona'] }}</td>
+                            <td>{{ $usu['categoria'] }}</td>
+                            <td class="text-right">
+                                    <div class="table-data-feature">
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                            <i class="zmdi zmdi-edit"></i>
+                                        </button>
+                                        <input type="hidden" name="id" class="btn btn-danger" value="{{ $usu['idUsuario'] }}">
+                                        <input type="hidden" name="_token" value="{{csrf_token()}}" />
+
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                        </tr>
+                        @csrf
+                    </form>
+                    @endforeach
+			        <!--<tr>
+
+
+					<form method="get" action="{{ url('EditarPersonal') }}" >
 						<td>8.548.596-5</td>
 						<td>Juan</td>
 						<td>Prez Rojas</td>
@@ -45,7 +74,7 @@
 						</td>
 						<td class="text-right">
 							<div class="table-data-feature">
-								<button class="item" data-toggle="tooltip" data-placement="top" title="Editar" href="url">
+								<button class="item" data-toggle="tooltip" data-placement="top" title="Editar" >
 									<i class="zmdi zmdi-edit"></i>
 								</button>
 								<button class="item" data-toggle="tooltip" data-placement="top" title="Eliminar">
@@ -111,10 +140,10 @@
 							</button>
 						</div>
 					</td>
-				</tr>
+				</tr>-->
 			</tbody>
 		</table>
 	</div>
 </div>
-      
-@endsection                  
+
+@endsection

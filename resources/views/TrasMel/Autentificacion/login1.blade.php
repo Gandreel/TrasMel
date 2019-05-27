@@ -70,7 +70,7 @@
         </div>
         @endif
       </div>
-        <form method="post">
+        <form method="post" action="{{ url('Inicio') }}">
             <input type="text" name="u" placeholder="Username" required="required" />
             <input type="password" name="p" placeholder="Password" required="required" />
             <button type="submit" class="btn btn-primary btn-block btn-large">Ingresar</button>

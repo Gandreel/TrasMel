@@ -19,13 +19,15 @@ Route::get('/', function () {
 Route::get('/adm', function () {
     return view('TrasMel.ADM.index');
 });
-Route::get('/Personal', function () {
-    return view('TrasMel.ADM.Personal');
-});
+//Route::get('/Personal', function () {
+   // return view('TrasMel.ADM.Personal');
+//});
 Route::get('/Personal/Editar', function () {
     return view('TrasMel.ADM.EditarUsuario');
 });
 
+Route::post('EditarPersonal','administradorController@editar');
+Route::get('Personal','administradorController@listar');
 
 Route::get('TrasMel','paginaController@index');
 Route::get('Seguimiento','paginaController@seguimiento');

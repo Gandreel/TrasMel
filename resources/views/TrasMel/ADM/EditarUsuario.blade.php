@@ -1,9 +1,9 @@
 @extends('Template.layoutTrasMelADM')
 @section('Contenido')
-	
+
 <div class="card">
 	<div class="card-header">
-		<strong>Editar</strong> Usuario
+        <strong>Editar</strong> Usuario
 	</div>
 	<div class="card-body card-block">
 		<form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
@@ -12,7 +12,7 @@
 					<label class=" form-control-label">Rut</label>
 				</div>
 				<div class="col-12 col-md-9">
-					<p class="form-control-static">8.548.596-5</p>
+                <input type="text" class=" form-control" name="id" value="{{ $usuario->idUsuario }}">
 				</div>
 			</div>
 			<div class="row form-group">

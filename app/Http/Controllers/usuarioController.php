@@ -19,10 +19,21 @@ class usuarioController extends Controller
         return view('TrasMel/autentificacion/registro1');
     }
 
-    public function login()
+    public function login(Request $request)
     {
+        $nombre = $request['nick'];
+        $valida = Usuario::all();
+        foreach($valida as $val){
+           if($val->nick == $nombre){
+               $categoria = Usuario::$categoria;
+               return view('TrasMel/autentificacion/registro1', compact("mensaje"));
+           }
+        }
+
+        $datos = Usuario::where('nick',$request->input('nick'))
+                ->orWhere('pass',$request->input('pass'))->first();
         $mensaje = null;
-        return view('TrasMel/autentificacion/login1', compact('mensaje'));
+        return view('TrasMel/Home/Inicio', compact('mensaje'));
     }
 
     public function registro()
