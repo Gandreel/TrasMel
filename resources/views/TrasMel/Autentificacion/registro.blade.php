@@ -1,35 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
-    <link href="{{asset('css/registro.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <title>TrasMel</title>
-</head>
-<body>
+@extends('Template.layoutTrasMel3')
+@section('Contenido')
 
-<div class="testbox">
-  <h1>Registro de Usuario</h1>
-
-  <form action="{{ URL::to('/store') }}" method="POST" role="form">
-
-  <hr>
-  <label id="icon" for="email"><i class="icon-envelope "></i></label>
-  <input type="text" name="correo" id="correo" placeholder="Email" required/>
-
-  <label id="icon" for="nickName"><i class="icon-user"></i></label>
-  <input type="text" name="nick" id="nick" placeholder="Nick Name" required/>
-
-  <label id="icon" for="pass"><i class="icon-shield"></i></label>
-  <input type="password" name="pass" id="pass" placeholder="Password" required/>
-  <hr>
-
-   <p>Si aprieta el boton de registro acepta los <a href="#">terminos y condiciones</a>.</p>
-   <input type="submit" class="button" value="enviar"/>
-  </form>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <br>
+      <br>
+    </div>
+  </div>
 </div>
-</body>
-</html>
+
+<section class="login">
+  <div class="titulo">Registrar</div>
+  <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+      <input type="text" required title="Username required" placeholder="E-Mail" data-icon="U" name="user">
+        <input type="password" required title="Password required" placeholder="Contraseña" data-icon="x" name="pass">
+        <div class="olvido">
+          <div class="col"><a href="#" title="Ver Carásteres">Ingresar</a></div>
+            <div class="col"><a href="#" title="Recuperar Password">Terminos y condiciones</a></div>
+        </div>
+        <a href="#" class="enviar">Ingresar</a>
+    </form>
+</section>
+
+@endsection

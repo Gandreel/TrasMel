@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Modelo\Usuario;
+use App\Modelo\Persona;
 
 
 use Illuminate\Http\Request;
@@ -22,7 +22,7 @@ class usuarioController extends Controller
 
     public function ingreso(){
         $mensaje = null;
-        return view('TrasMel/autentificacion/login1',compact("mensaje"));
+        return view('TrasMel/autentificacion/login',compact("mensaje"));
     }
 
     public function login(Request $request)
@@ -45,7 +45,7 @@ class usuarioController extends Controller
     public function registro()
     {
         $mensaje = null;
-        return view('TrasMel/autentificacion/registro1', compact('mensaje'));
+        return view('TrasMel/autentificacion/registro', compact('mensaje'));
     }
 
     /**
@@ -75,19 +75,22 @@ class usuarioController extends Controller
             }
 
 
-        $usu = new Usuario();
-        $usu->nick = $request['nick'];
+        $usu = new Persona();
+        $usu->nombre = $request['nombre'];
+        $usu->apellidos = $request['apellidos'];
+        $usu->rut = $request['rut'];
         $usu->pass = $request['pass'];
-        $usu->correo = $request['correo'];
-        $usu->idPersona = $request['idPersona'];
+        $usu->email = $request['correo'];
+        $usu->fono = $request['fono'];
+        $usu->direccion = $request['direccion'];
         $usu->categoria = $request['categoria'];
         $usu->avatar = $name;
-        $nombre =$request['nick'];
+        $correo = $request['correo'];
 
         //validar que nombre de usuario sea unico
-        $valida = Usuario::all();
+        $valida = Persona::all();
              foreach($valida as $val){
-                if($val->nick == $nombre){
+                if($val->email == $correo){
                     $mensaje = 'Usuario ya existente';
                     return view('TrasMel/autentificacion/registro1', compact("mensaje"));
                 }
@@ -101,9 +104,6 @@ class usuarioController extends Controller
             $mensaje = "error al Registrar";
             return view('TrasMel/autentificacion/login1', compact("mensaje"));
         }
-
-
-
     }
 
     /**

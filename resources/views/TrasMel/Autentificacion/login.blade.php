@@ -1,59 +1,26 @@
+@extends('Template.layoutTrasMel3')
+@section('Contenido')
 
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>TrasMel</title>
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-<link href="{{asset('css/login.css')}}" rel="stylesheet" type="text/css" media="all" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- -->
-<script>var __links = document.querySelectorAll('a');function __linkClick(e) { parent.window.postMessage(this.href, '*');} ;for (var i = 0, l = __links.length; i < l; i++) {if ( __links[i].getAttribute('data-t') == '_blank' ) { __links[i].addEventListener('click', __linkClick, false);}}</script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script>$(document).ready(function(c) {
-	$('.alert-close').on('click', function(c){
-		$('.message').fadeOut('slow', function(c){
-	  		$('.message').remove();
-		});
-	});
-});
-</script>
-</head>
-<body>
-<!-- contact-form -->
-<div class="message warning">
-<div class="inset">
-	<div class="login-head">
-		<h1>Ingreso de Usuario</h1>
-		 <div class="alert-close"> </div>
-	</div>
-		<form>
-			<li>
-				<input type="text" class="text"  value="Usuario" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}"><a href="#" class=" icon user"></a>
-			</li>
-				<div class="clear"> </div>
-			<li>
-				<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"> <a href="#" class="icon lock"></a>
-			</li>
-			<div class="clear"> </div>
-			<div class="submit">
-				<input type="submit" onclick="myFunction()" value="Ingresar" >
-				<h4><a href="#">No recuerda su Contraseña ?</a></h4>
-						  <div class="clear">  </div>
-			</div>
-
-		</form>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<br>
+			<br>
 		</div>
 	</div>
-	</div>
-	<div class="clear"> </div>
-<!--- footer --->
-<div class="footer">
-	<p>TrasMel 2019 ®</p>
 </div>
-</body>
-</html>
 
+<section class="login">
+	<div class="titulo">Ingresar</div>
+	<form action="#" method="post" enctype="application/x-www-form-urlencoded">
+    	<input type="text" required title="Username required" placeholder="E-Mail" data-icon="U" name="user">
+        <input type="password" required title="Password required" placeholder="Contraseña" data-icon="x" name="pass">
+        <div class="olvido">
+        	<div class="col"><a href="#" title="Ver Carásteres">Registarse</a></div>
+            <div class="col"><a href="#" title="Recuperar Password">Recuperar Contraseña</a></div>
+        </div>
+        <a href="#" class="enviar">Ingresar</a>
+    </form>
+</section>
 
-
+@endsection

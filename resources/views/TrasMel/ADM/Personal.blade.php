@@ -54,97 +54,44 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="tr-shadow">
-							<td>
-								<label class="au-checkbox">
+						 <form action="{{ url('EditarPersonal') }}" method="post">
+                                    @foreach ($usuarios as $usu)
+                                            <tr>
+                                            	<th><label class="au-checkbox">
 									<input type="checkbox">
 									<span class="au-checkmark"></span>
-								</label>
-							</td>
-							<td>8.598.689-6</td>
-							<td>Alan</td>
-							<td>Brito Delgado</td>
-							<td>+56 984215487</td>
-							<td>
-								<span class="role admin">Administrador</span>
-							</td>
-							<td>
-								<span class="status--process">Activo</span>
-							</td>
-							
-							<td>
-								<div class="table-data-feature">
-									<button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
-										<i class="zmdi zmdi-edit"></i>
-									</button>
-									<button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
-										<i class="zmdi zmdi-delete"></i>
-									</button>
-								</div>
-							</td>
-						</tr>
-						<tr class="spacer"></tr>
-						<tr class="tr-shadow">
-							<td>
-								<label class="au-checkbox">
-									<input type="checkbox">
-									<span class="au-checkmark"></span>
-								</label>
-							</td>
-							<td>8.598.689-6</td>
-							<td>Alan</td>
-							<td>Brito Delgado</td>
-							<td>+56 984215487</td>
-							<td>
-								<span class="role user">Pioneta</span>
-							</td>
-							<td>
-								<span class="status--denied">Inactivo</span>
-							</td>
-							
-							<td>
-								<div class="table-data-feature">
-									<button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
-										<i class="zmdi zmdi-edit"></i>
-									</button>
-									<button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
-										<i class="zmdi zmdi-delete"></i>
-									</button>
-								</div>
-							</td>
-						</tr>
-						<tr class="spacer"></tr>
-						<tr class="tr-shadow">
-							<td>
-								<label class="au-checkbox">
-									<input type="checkbox">
-									<span class="au-checkmark"></span>
-								</label>
-							</td>
-							<td>8.598.689-6</td>
-							<td>Alan</td>
-							<td>Brito Delgado</td>
-							<td>+56 984215487</td>
-							<td>
-								<span class="role member">Chofer</span>
-							</td>
-							<td>
-								<span class="status--warning">Pendiente</span>
-							</td>
-							
-							<td>
-								<div class="table-data-feature">
-									<button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
-										<i class="zmdi zmdi-edit"></i>
-									</button>
-									<button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
-										<i class="zmdi zmdi-delete"></i>
-									</button>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+								</label></th>
+                                                <td>{{ $usu['rut'] }}</td>
+                                                <td>{{ $usu['nombre'] }}</td>
+                                                <td>{{ $usu['apellidos'] }}</td>
+                                                <td>{{ $usu['fono'] }}</td>
+                                                <td> @if ( $usu['categoria']  == 1)
+                                                    Administrador
+
+                                                @elseif ($usu['categoria']  == 2)
+                                                    echo Cliente;
+                                                @else
+                                                echo Transportista;
+
+                                                @endif </td>
+
+                                                <td class="text-right">
+                                                        <div class="table-data-feature">
+                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                <i class="zmdi zmdi-edit"></i>
+                                                            </button>
+                                                            <input type="hidden" name="id" class="btn btn-danger" value="{{ $usu['rut'] }}">
+                                                            <input type="hidden" name="_token" value="{{csrf_token()}}" />
+
+                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                                                <i class="zmdi zmdi-delete"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                            </tr>
+                                            @csrf
+                                        </form>
+                                        @endforeach
+
 
 @endsection

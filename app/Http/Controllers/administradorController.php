@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Modelo\Usuario;
+use App\Modelo\Persona;
 use App\Modelo\Chofer;
 
 class administradorController extends Controller
@@ -19,13 +19,13 @@ class administradorController extends Controller
     }
     public function editar(Request $request)
     {
-        $usuario = Usuario::where('idUsuario',$request->input('id'))->first();
-        $idUsuario = $usuario->idusuario;
-        return view('TrasMel/ADM/EditarUsuario',compact('usuario','idUsuario'));
+        $persona = Persona::where('rut',$request->input('id'))->first();
+        $rutPersona = $persona->rut;
+        return view('TrasMel/ADM/EditarUsuario',compact('persona','rutPersona'));
     }
 
     public function listar(){
-        $usuarios=Usuario::all();
+        $usuarios=Persona::all();
                 return view('TrasMel/ADM/Personal',compact('usuarios'));
     }
 
