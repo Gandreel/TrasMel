@@ -18,30 +18,43 @@ class usuarioController extends Controller
     public function index()
     {
 
-        return view('TrasMel/autentificacion/registro1');
+    }
+
+    public function indexPerfil()
+    {
+        $mensaje = null;
+        return view('TrasMel/Clientes/EditarPerfil', compact('mensaje'));
+    }
+
+    public function perfil(Request $request){
+        $validaCorreo = Usuario::where('correo','=',$request['correo'] )->first();
+        $validaPass = Usuario::where('pass','=',$request['pass'] )->first();
+        if ($validaCorreo != null && $validaPass != null) {
+            $dato = Persona::where('email', '=', $request['correo'])->first();
+            if ($dato === null) {
+                $correo = $request['correo'];
+                $pass = $request['pass'];
+                $id = Usuario::where('correo','=',$request['correo'] )->value('idUsuario');
+
+                $mensaje ="Debe Rellenar Sus Datos";
+                return view('TrasMel/Clientes/EditarPerfil',compact('correo','pass','mensaje','id'));
+            }else{
+                $usuario= "";
+                return view('TrasMel/Home/index', compact('usuario'));
+            }
+        }else{
+            $mensaje = 'Usuario o Contraseña Invalido';
+            return view('TrasMel/Autentificacion/login', compact('mensaje'));
+        }
+
     }
 
     public function ingreso(){
         $mensaje = null;
-        return view('TrasMel/autentificacion/login',compact("mensaje"));
+        return view('TrasMel/Autentificacion/login',compact("mensaje"));
     }
 
-    public function login(Request $request)
-    {
-        $nombre = $request['nick'];
-        $valida = Usuario::all();
-        foreach($valida as $val){
-           if($val->nick == $nombre){
-               $categoria = Usuario::$categoria;
-               return view('TrasMel/autentificacion/registro1', compact("mensaje"));
-           }
-        }
 
-        $datos = Usuario::where('nick',$request->input('nick'))
-                ->orWhere('pass',$request->input('pass'))->first();
-        $mensaje = null;
-        return view('TrasMel/Home/Inicio', compact('mensaje'));
-    }
 
     public function registro()
     {
@@ -70,17 +83,64 @@ class usuarioController extends Controller
     {
 
     try {
-         $us = new Usuario();
-         $us->correo = $request['correo'];
-         $us->pass = $request['pass'];
-         $us->save();
 
-         $mensaje = "Usuario creado exitosamente";
-         return view('TrasMel/autentificacion/login', compact("mensaje"));
+            $correo = $request['correo'];
+            $validaCorreo = Usuario::where('correo', '=', $request['correo'])->first();
+                if($validaCorreo === $correo){
+                    $mensaje = 'Correo ya existente';
+                    return view('TrasMel/autentificacion/Registro', compact("mensaje"));
+                }else{
+                    if ($request['pass'] != $request['confirmar']){
+
+                        $mensaje = "Contraseñas no coinciden";
+                        return view('TrasMel/Autentificacion/Registro', compact("mensaje"));
+                     }else{
+                        $us = new Usuario();
+                        $us->correo = $request['correo'];
+                        $us->pass = $request['pass'];
+                        $us->save();
+
+                        $mensaje = "Usuario creado exitosamente";
+                        return view('TrasMel/Autentificacion/login', compact("mensaje"));
+                     }
+
+
+             }
     } catch (Exception $e){
         $mensaje = "error al Registrar";
-        return view('TrasMel/autentificacion/registro', compact("mensaje"));
+        return view('TrasMel/Autentificacion/registro', compact("mensaje"));
     }
+}
+
+public function crearActualizar(Request $request){
+    $mensaje= null;
+    $validaCorreo = Persona::where('email', '=', $request['correo'])->first();
+    if ($validaCorreo === null) {
+
+        if ($request->hasFile('avatar')) {
+            $file = $request['avatar'];
+            $name = time().$file->getClientOriginalName();
+            $file->move(public_path().'/avatars/', $name);
+            $usu = new Persona();
+        $usu->nombre = $request['nombre'];
+        $usu->apellidos = $request['apellidos'];
+        $usu->rut = $request['rut'];
+        $usu->email = $request['correo'];
+        $usu->fono = $request['fono'];
+        $usu->direccion = $request['direccion'];
+        $usu->categoria = $request['categoria'];
+        $usu->avatar = $name;
+        $usu->usuario_id = $request['id'];
+        $usu->save();
+        }
+
+        $correo = $request['correo'];
+        $id = $request['id'];
+        $mensaje = "Usuario creado exitosamente";
+        return view('TrasMel/Clientes/EditarPerfil', compact("mensaje",'correo', 'id'));
+    }
+
+
 }
 
     public function store(Request $request)

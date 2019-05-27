@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateForeignKey extends Migration
+class CreateForeigKey extends Migration
 {
     /**
      * Run the migrations.
@@ -58,9 +58,10 @@ class CreateForeignKey extends Migration
             $table->foreign('tipoProducto_id')->references('id')->on('tipo_producto');
         });
 
-
-
-
+        Schema::table('persona', function (Blueprint $table) {
+            $table->bigInteger('usuario_id')->unsigned();
+            $table->foreign('usuario_id')->references('idUsuario')->on('usuario');
+        });
 
     }
 
@@ -71,6 +72,6 @@ class CreateForeignKey extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('foreign_key');
+        Schema::dropIfExists('foreig_key');
     }
 }

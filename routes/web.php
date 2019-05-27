@@ -39,22 +39,14 @@ Route::get('AppMovil', 'paginaController@noticia1');
 Route::get('Seguimientos', 'paginaController@noticia2');
 Route::get('Trasmel', 'paginaController@noticia3');
 
-
+//registros
 Route::get('Login', 'usuarioController@ingreso');
 Route::get('Registro', 'usuarioController@registro');
-/*
-
-Route::get('Login','TrasMel/autentificacion/login');
-
-Route::get('Log', 'TrasMel/autentificacion/login1');
-Route::get('Registro','TrasMel/Autentificacion/registro');
-
-
-*/
-
-
+Route::get('Perfil', 'usuarioController@indexPerfil');
 //post
-Route::post('reg', 'usuarioController@registrarse' );
+Route::post('ActualizarCrear', 'usuarioController@crearActualizar');
+Route::post('Login', 'usuarioController@registrarse');
+Route::post('Perfil', 'usuarioController@perfil');
 
 /*Route::post('user/profile', 'usuarioController@store')->name('profile');
 

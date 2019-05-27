@@ -14,7 +14,7 @@ class CreateUsuario extends Migration
     public function up()
     {
         Schema::create('usuario', function (Blueprint $table) {
-            $table->integer('idUsuario')->autoIncrement();
+            $table->bigIncrements('idUsuario');
             $table->string('pass');
             $table->string('correo');
             $table->rememberToken();

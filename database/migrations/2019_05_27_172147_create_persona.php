@@ -20,7 +20,6 @@ class CreatePersona extends Migration
             $table->string('nombre', 50)->nullable()->default('text');
             $table->string('apellidos', 50)->nullable()->default('text');
             $table->string('email', 50)->nullable()->default('text')->unique();
-            $table->string('pass');
             $table->integer('fono')->unsigned()->nullable()->default(9);
             $table->string('direccion', 50)->nullable()->default('text');
             $table->integer('categoria')->unsigned()->nullable();
