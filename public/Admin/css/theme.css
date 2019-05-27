@@ -195,7 +195,7 @@ strong {
     text-transform: capitalize;
     font-size: 22px;
     font-weight: 500;
-    color: #393939;
+    color: #fff;
 }
 
 .title-6 {
@@ -4481,8 +4481,9 @@ section {
     border-collapse: collapse;
     overflow: visible;
 }
-
+    
 .table-data2.table thead th {
+    background: #212529;
     font-size: 12px;
     color: #fff;
     text-transform: uppercase;
