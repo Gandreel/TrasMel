@@ -20,6 +20,7 @@ class CreateUsuario extends Migration
             $table->string('correo');
             $table->bigInteger('idPersona');
             $table->string('categoria');
+            $table->string('avatar');
             $table->rememberToken();
             $table->timestamps();
         });

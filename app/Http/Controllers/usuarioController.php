@@ -68,12 +68,20 @@ class usuarioController extends Controller
     {
         try {
 
+            if($request->hasFile('avatar')){
+                $file = $request['avatar'];
+                $name = time().$file->getClientOriginalName();
+                $file->move(public_path().'/avatars/', $name);
+            }
+
+
         $usu = new Usuario();
         $usu->nick = $request['nick'];
         $usu->pass = $request['pass'];
         $usu->correo = $request['correo'];
         $usu->idPersona = $request['idPersona'];
         $usu->categoria = $request['categoria'];
+        $usu->avatar = $name;
         $nombre =$request['nick'];
 
         //validar que nombre de usuario sea unico

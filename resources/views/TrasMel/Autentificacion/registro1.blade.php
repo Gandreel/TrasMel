@@ -67,7 +67,7 @@
             </div>
             @endif
           </div>
-        <form action="{{URL::to('reg')}}" method="post">
+        <form action="{{URL::to('reg')}}" method="post" enctype="multipart/form-data">
             <input type="text" name="nick" placeholder="Nickname" required="required" />
             <input type="password" name="pass" placeholder="Password" required="required" />
             <input type="text" name="correo" placeholder="Email" required="required" />
@@ -78,6 +78,7 @@
                 <option value="Cliente" selected>Cliente</option>
                 <option value="Trasportista">Transportista</option>
               </select>
+            <input type="file" name="avatar" >
 
 
             <button type="submit" class="btn btn-primary btn-block btn-large">Registrar</button>
@@ -85,7 +86,7 @@
         </form>
     </div>
 
-    <footer class="footer-section">
+   <!-- <footer class="footer-section">
             <div class="container">
               <a href="#" class="footer-logo">
                 <img src="{{ asset('./img/logo.png') }}" alt="">
@@ -106,7 +107,7 @@
               </div>
               <div class="copyright"><a href="">TrasMel</a> 2019 @ All rights reserved</div>
             </div>
-          </footer>
+          </footer>-->
 
 </body>
 </html>
