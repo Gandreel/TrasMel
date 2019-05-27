@@ -54,7 +54,7 @@ Route::get('Registro','TrasMel/Autentificacion/registro');
 
 
 //post
-Route::post('reg', 'usuarioController@store' );
+Route::post('reg', 'usuarioController@registrarse' );
 
 /*Route::post('user/profile', 'usuarioController@store')->name('profile');
 

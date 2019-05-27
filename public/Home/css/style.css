@@ -1786,10 +1786,11 @@ ol {
 
 .login {
     width: 300px;
-    height: 300px;
+    height: auto;
     overflow: hidden;
     border-radius: 6px;
     margin: 50px auto;
+    padding-bottom: 15px;
     box-shadow: 0px 0px 50px rgba(0,0,0,.8);
     background: #0f0c29;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
@@ -1821,7 +1822,7 @@ ol {
     margin-right: auto;
 }
 
-.login form input[type=text], .login form input[type=password] {
+.login form input[type=text], .login form input[type=password] , .login form input[type=file]{
     width: 200px;
     font-size: 12px;
     padding-top: 14px;
@@ -1834,6 +1835,23 @@ ol {
     margin: 0;
     font-family: Arial;
 }
+.login form select{
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-top: #0b0b0b solid 1px;
+    background: #16181b url(http://dev.dhenriquez.com/test-img/icons/111-user.png) 10px center no-repeat;
+    font-size: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 40px;
+    border: none;
+    color: #bfbfbf;
+    background: #141414;
+    outline: none;
+    margin-bottom: 5px;
+    font-family: Arial;
+}
 
 .login form input[type=text] {
 	width: 100%;
@@ -1844,6 +1862,15 @@ ol {
     margin-bottom: 5px;
     font-family: Arial;
 }
+/*.login form input[type=file] {
+	width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-top: #0b0b0b solid 1px;
+    background: #16181b url(http://dev.dhenriquez.com/test-img/icons/111-user.png) 10px center no-repeat;
+    margin-bottom: 5px;
+    font-family: Arial;
+}*/
 
 .login form input[type=password] {
 	width: 100%;
@@ -1906,7 +1933,7 @@ ol {
     color: #b01ba5;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */

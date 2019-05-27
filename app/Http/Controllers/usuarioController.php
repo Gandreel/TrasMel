@@ -6,6 +6,7 @@ use App\Modelo\Persona;
 
 
 use Illuminate\Http\Request;
+use App\Modelo\Usuario;
 
 class usuarioController extends Controller
 {
@@ -64,6 +65,24 @@ class usuarioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function registrarse(Request $request)
+    {
+
+    try {
+         $us = new Usuario();
+         $us->correo = $request['correo'];
+         $us->pass = $request['pass'];
+         $us->save();
+
+         $mensaje = "Usuario creado exitosamente";
+         return view('TrasMel/autentificacion/login', compact("mensaje"));
+    } catch (Exception $e){
+        $mensaje = "error al Registrar";
+        return view('TrasMel/autentificacion/registro', compact("mensaje"));
+    }
+}
+
     public function store(Request $request)
     {
         try {
