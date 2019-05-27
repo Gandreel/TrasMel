@@ -37,7 +37,7 @@ class paginaController extends Controller
     }
 
     public function noticia2(){
-        return view('TrasMel/Noticias/Noticias/Seguimiento');
+        return view('TrasMel/Noticias/Seguimiento');
     }
 
     public function noticia3(){

@@ -16,7 +16,13 @@ class usuarioController extends Controller
      */
     public function index()
     {
+
         return view('TrasMel/autentificacion/registro1');
+    }
+
+    public function ingreso(){
+        $mensaje = null;
+        return view('TrasMel/autentificacion/login1',compact("mensaje"));
     }
 
     public function login(Request $request)
