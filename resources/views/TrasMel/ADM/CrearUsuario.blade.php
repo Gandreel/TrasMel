@@ -3,7 +3,7 @@
 
 <div class="card">
     <div class="card-header">
-        <strong>Editar</strong> Usuario
+        <strong>Crear</strong> Usuario
     </div>
     <div class="card-body card-block">
         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
@@ -13,7 +13,7 @@
                     <label class=" form-control-label">Avatar</label>
                 </div>
                 <div class="col-3 col-md-2">
-                    <img src="avatars/{{ $persona->avatar }}" alt="John Doe" />
+                    <img src="" alt="John Doe" />
                 </div>
                 <div class="col-5 col-md-5">
                     <input type="file" id="file-input" name="file-input" class="form-control-file">
@@ -24,7 +24,7 @@
                     <label class=" form-control-label">Rut</label>
                 </div>
                 <div class="col-4 col-md-3">
-                    <input type="text" class=" form-control" name="id" value="{{ $persona['rut'] }}"
+                    <input type="text" class=" form-control" name="id" value=""
                         placeholder="1111111-1">
                 </div>
             </div>
@@ -33,7 +33,7 @@
                     <label for="text-input" class=" form-control-label">Nombre</label>
                 </div>
                 <div class="col-12 col-md-9">
-                    <input type="text" id="text-input" name="text-input" value="{{ $persona['nombre'] }}"
+                    <input type="text" id="text-input" name="text-input" value=""
                         placeholder="Nombre" class="form-control">
                 </div>
             </div>
@@ -42,7 +42,7 @@
                     <label for="email-input" class=" form-control-label">Apellido Paterno</label>
                 </div>
                 <div class="col-12 col-md-9">
-                    <input type="text" id="text-input" name="text-input" value="{{ $persona['apellidos'] }}"
+                    <input type="text" id="text-input" name="text-input" value=""
                         placeholder="Apellido Paterno" class="form-control">
                 </div>
             </div>
@@ -52,7 +52,7 @@
                     <label for="email-input" class=" form-control-label">E-Mail</label>
                 </div>
                 <div class="col-12 col-md-9">
-                    <input type="email" id="email-input" name="email-input" value="{{ $persona['email'] }}"
+                    <input type="email" id="email-input" name="email-input" value=""
                         placeholder="E-Mail" class="form-control">
                 </div>
             </div>
@@ -61,7 +61,7 @@
                     <label for="email-input" class=" form-control-label">Fono</label>
                 </div>
                 <div class="col-12 col-md-9">
-                    <input type="text" id="text-input" name="text-input" value="{{ $persona['fono'] }}"
+                    <input type="text" id="text-input" name="text-input" value=""
                         placeholder="+56987456325" class="form-control">
                 </div>
             </div>
@@ -70,7 +70,7 @@
                     <label for="email-input" class=" form-control-label">Direccion</label>
                 </div>
                 <div class="col-12 col-md-9">
-                    <input type="text" id="text-input" name="text-input" value="{{ $persona['direccion'] }}"
+                    <input type="text" id="text-input" name="text-input" value=""
                         placeholder="Las Ágatas 405, Viña del Mar, Viña del Mar, Chile" class="form-control">
                 </div>
             </div>
@@ -102,7 +102,7 @@
     </div>
     <div class="card-footer">
         <button type="submit" class="btn btn-primary btn-sm">
-            <i class="fa fa-dot-circle-o"></i> Guardar
+            <i class="fa fa-dot-circle-o"></i> Crear
         </button>
         <button type="reset" class="btn btn-danger btn-sm">
             <i class="fa fa-ban"></i> Cancelar
