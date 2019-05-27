@@ -65,13 +65,17 @@
                 <div class="main-content">
                     <div class="section__content section__content--p30">
                         <div class="container-fluid">
-                            @yield('Contenido')
+                          <div class="row">
+                            <div class="col-md-12">
+                              @yield('Contenido')
+                            </div>
+                          </div>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="copyright">
-                                        <p>Copyright © 2019 TrasMel. Todos los Derechos Reservados.
-                                    </div>
+                              <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2019 TrasMel. Todos los Derechos Reservados.
                                 </div>
+                              </div>
                             </div>
                         </div>
                     </div>
