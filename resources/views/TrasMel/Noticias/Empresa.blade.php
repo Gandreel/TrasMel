@@ -19,16 +19,16 @@
 	<section class="games-single-page">
 		<div class="container">
 			<div class="game-single-preview">
-				<img src="{{ asset('Home/img/blog-big/app.png') }}" alt="">
+				<img src="{{ asset('Home/img/blog-big/Empresa.jpg') }}" alt="">
 			</div>
 			<div class="row">
 				<div class="col-xl-9 col-lg-8 col-md-7 game-single-content">
-					<div class="gs-meta">24/05/2019  /  en <a href="">Noticias</a></div>
-					<h2 class="gs-title">TrasMel lanza su aplicación movil</h2>
+					<div class="gs-meta">03/03/2019  /  en <a href="">Noticias</a></div>
+					<h2 class="gs-title">Se presenta una nueva Empresa</h2>
 					<h4>Noticia</h4>
-					<p>Durante la feria de desarrollo e innovación, la empresa TrasMel anunció el lanzamiento de su nuevo aplicación, llamada de la misma manera que la empresa, en una entrevista con el director de desarrollo, Cristopher Escobar, nos dijo "Nuestra aplicación está enfocada a que el cliente pueda obtener el seguimiento de su encomienda en tiempo real", esto ha llamado mucho la atención, ya que según el Gerente "La cifras de perdidas de envios en todo el pais son excesivos, es por esto que hemos querido mejorar esto, la idea de nuestra aplicación es que el cliente tenga la seguridad de que su envio está en camino, además de tener evidencias sobre el envio", </p>
+					<p>Durante la feria de innovación hecha dentro del establecimiento educacional, DuocUC, especificamente en la sede de Viña del Mar, se presentó la nueva empresa llamada TrasMel, según lo que dijo el Gerente, Alexander Maldonado, "Nuestra empresa está destinada al monitoreo de los envios que hacen los clientes a través de los correos, tales como correos de Chile, Chilexpress, Starken, entre otros." Según el Jefe en Desarrollo, Cristopher Escobar, nos dijo que "Tenemos muchas ideas para el futuro y apenas tengamos listas nuestras maquetas, lanzaremos la noticia a todo el mundo, pero por el momento todo es secreto." Luego de esto la empresa se despidió del público.</p>
 					<div class="geme-social-share pt-5 d-flex">
-						<p>Compartir:</p>
+						<p>Share:</p>
 						<a href="#"><i class="fa fa-pinterest"></i></a>
 						<a href="#"><i class="fa fa-facebook"></i></a>
 						<a href="#"><i class="fa fa-twitter"></i></a>
@@ -40,10 +40,10 @@
 					<div id="stickySidebar">
 						<div class="widget-item">
 							<div class="testimonials-widget">
-								<h4 class="widget-title">Comentario</h4>
+								<h4 class="widget-title">Testimonials</h4>
 								<div class="testim-text">
-									<p>Muy buen trabajo, espero sigan innovando, se merecen todo el apoyo en lo que están haciendo.</p>
-									<h6><span>Luis Lazo,</span>Informatico</h6>
+									<p>Veamos que tal, espero que les salga todo bien y puedan tener mucho exito de todas maneras.</p>
+									<h6><span>Luis Lazo,</span>Informatica</h6>
 								</div>
 							</div>
 						</div>
@@ -71,7 +71,7 @@
 			<h2>Suscríbete para recibir nuestras últimas noticias</h2>
 			<form class="newsletter-form">
 				<input type="text" placeholder="Ingrese su E-Mail">
-				<button class="site-btn">subscrirse <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></button>
+				<button class="site-btn">subscrir <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></button>
 			</form>
 		</div>
 	</section>

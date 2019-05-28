@@ -5,26 +5,26 @@
 	<div class="row">
 		<div class="col-md-4">
 			<div class="intro-text-box text-box text-white">
-				<div class="top-meta">16.05.2019  / <a href="">Noticias</a></div>
-				<h3>The best online game is out now!</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida....</p>
-				<a href="#" class="read-more">Read More  <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></a>
+				<div class="top-meta">24/05/2019  / <a href="">Noticias</a></div>
+				<h3>Trasmel Lanza su Aplicacion Movil</h3>
+				<p>Durante la feria de desarrollo e innovación, la empresa TrasMel...</p>
+				<a href="{{ url('AppMovil') }}" class="read-more">Read More  <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></a>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="intro-text-box text-box text-white">
-				<div class="top-meta">11.11.18  / <a href="">Noticias</a></div>
-				<h3>Top 5 best games in november</h3>
-				<p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum  labore suspendisse ultrices gravida....</p>
-				<a href="#" class="read-more">Sigue Leyendo  <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></a>
+				<div class="top-meta">20/03/2019  / <a href="">Noticias</a></div>
+				<h3>TrasMel anuncia que está desarrollando una Aplicación Movil</h3>
+				<p>Durante una entrevista al gerente de la empresa TrasMel, Alexander Maldonado, nos ha anunciado que su equipo de desarrollo informatico está creando...</p>
+				<a href="{{ url('Anuncio') }}" class="read-more">Sigue Leyendo  <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></a>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="intro-text-box text-box text-white">
-				<div class="top-meta">11.11.18  / <a href="">Noticias</a></div>
-				<h3>Get this game at a promo price</h3>
-				<p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida ncididunt ut labore ....</p>
-				<a href="#" class="read-more">Sigue Leyendo  <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></a>
+				<div class="top-meta">03/03/2019  / <a href="">Noticias</a></div>
+				<h3>Se presenta una nueva Empresa</h3>
+				<p>Durante la feria de innovación hecha dentro del establecimiento educacional, DuocUC, especificamente en la sede de Viña del Mar, se presentó la nueva empresa llamada...</p>
+				<a href="{{ url('Empresa') }}" class="read-more">Sigue Leyendo  <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></a>
 			</div>
 		</div>
 	</div>

@@ -44,6 +44,13 @@ class paginaController extends Controller
         return view('TrasMel/Noticias/Noticias/TrasMel');
     }
 
+    public function noticia4(){
+        return view('TrasMel/Noticias/Anuncio');
+    }
+
+    public function noticia5(){
+        return view('TrasMel/Noticias/Empresa');
+    }
     /**
      * Show the form for creating a new resource.
      *

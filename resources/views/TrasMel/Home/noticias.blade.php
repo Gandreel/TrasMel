@@ -32,25 +32,25 @@
 							<div class="top-meta">24/05/2019  / <a href="">Noticias</a></div>
 							<h3>Trasmel Lanza su Aplicacion Movil</h3>
 							<p>Durante la feria de desarrollo e innovación, la empresa TrasMel anunció el lanzamiento de su nuevo aplicación, llamada de la misma manera que la empresa, en una entrevista con el director de desarrollo, Cristopher Escobar, nos dijo "Nuestra aplicación está enfocada a que el cliente pueda obtener el seguimiento de su encomienda en tiempo real"...</p>
-							<a href="{{ url('AppMovil') }}" class="read-more">Siga Leyendo <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></a>
+							<a href="{{ url('AppMovil') }}" class="read-more">Seguir Leyendo <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></a>
 						</div>
 					</div>
 					<div class="big-blog-item">
-						<img src="{{ asset('Home/img/blog-big/2.jpg') }}" alt="#" class="blog-thumbnail">
+						<img src="{{ asset('Home/img/blog-big/Anuncio.jpg') }}" alt="#" class="blog-thumbnail">
 						<div class="blog-content text-box text-white">
 							<div class="top-meta">20/03/2019  / <a href="">Noticias</a></div>
 							<h3>TrasMel anuncia que está desarrollando una Aplicación Movil</h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
-							<a href="#" class="read-more">Siga Leyendo <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></a>
+							<p>Durante una entrevista al gerente de la empresa TrasMel, Alexander Maldonado, nos ha anunciado que su equipo de desarrollo informatico está creando una aplicación movil, lo que nos ha dicho es que "Esperamos lanzar pronto la aplicación movil, pero no la lanzaremos hasta que..."</p>
+							<a href="{{ url('Anuncio') }}" class="read-more">Seguir Leyendo <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></a>
 						</div>
 					</div>
 					<div class="big-blog-item">
-						<img src="{{ asset('Home/img/blog-big/3.jpg') }}" alt="#" class="blog-thumbnail">
+						<img src="{{ asset('Home/img/blog-big/Empresa.jpg') }}" alt="#" class="blog-thumbnail">
 						<div class="blog-content text-box text-white">
-							<div class="top-meta">11.11.18  / <a href="">Noticias</a></div>
-							<h3>The best online game is out now!</h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
-							<a href="#" class="read-more">Siga Leyendo <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></a>
+							<div class="top-meta">03/03/2019  / <a href="">Noticias</a></div>
+							<h3>Se presenta una nueva Empresa</h3>
+							<p>Durante la feria de innovación hecha dentro del establecimiento educacional, DuocUC, especificamente en la sede de Viña del Mar, se presentó la nueva empresa llamada TrasMel, según lo que dijo el Gerente, Alexander Maldonado, "Nuestra empresa está destinada a..."</p>
+							<a href="{{ url('Empresa') }}" class="read-more">Seguir Leyendo <img src="{{ asset('Home/img/icons/double-arrow.png') }}" alt="#"/></a>
 						</div>
 					</div>
 					<div class="site-pagination">
@@ -67,7 +67,7 @@
 								<button>Buscar</button>
 							</form>
 						</div>
-						<div class="widget-item">
+						<!--<div class="widget-item">
 							<h4 class="widget-title">Ultimas Noticias</h4>
 							<div class="trending-widget">
 								<div class="tw-item">
@@ -107,25 +107,25 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div>-->
 						<div class="widget-item">
 							<h4 class="widget-title">Ultimos Comentarios</h4>
 							<div class="latest-comments">
 								<div class="lc-item">
 									<img src="{{ asset('Home/img/blog-widget/1.jpg') }}" class="lc-avatar" alt="#">
-									<div class="tw-text"><a href="">Alan Brito</a> <span>En</span> The best online game out there </div>
+									<div class="tw-text"><a href="">Alan Brito</a> <span>En</span> Trasmel Lanza su Aplicacion Movil </div>
 								</div>
 								<div class="lc-item">
 									<img src="{{ asset('Home/img/blog-widget/2.jpg') }}" class="lc-avatar" alt="#">
-									<div class="tw-text"><a href="">Juan Perez</a> <span>En</span> The best online game out there </div>
+									<div class="tw-text"><a href="">Juan Perez</a> <span>En</span> Trasmel Lanza su Aplicacion Movil </div>
 								</div>
 								<div class="lc-item">
 									<img src="{{ asset('Home/img/blog-widget/3.jpg') }}" class="lc-avatar" alt="#">
-									<div class="tw-text"><a href="">Roberto Manfinfla</a> <span>En</span> The best online game out there </div>
+									<div class="tw-text"><a href="">Roberto Manfinfla</a> <span>En</span> Trasmel Lanza su Aplicacion Movil </div>
 								</div>
 								<div class="lc-item">
 									<img src="{{ asset('Home/img/blog-widget/4.jpg') }}" class="lc-avatar" alt="#">
-									<div class="tw-text"><a href="">Jhon Smith</a> <span>En</span> The best online game out there </div>
+									<div class="tw-text"><a href="">Jhon Smith</a> <span>En</span> Trasmel Lanza su Aplicacion Movil </div>
 								</div>
 							</div>
 						</div>

@@ -38,7 +38,8 @@ Route::get('Contacto', 'paginaController@contacto');
 Route::get('AppMovil', 'paginaController@noticia1');
 Route::get('Seguimientos', 'paginaController@noticia2');
 Route::get('Trasmel', 'paginaController@noticia3');
-
+Route::get('Anuncio', 'paginaController@noticia4');
+Route::get('Empresa', 'paginaController@noticia5');
 //registros
 Route::get('Login', 'usuarioController@ingreso');
 Route::get('Registro', 'usuarioController@registro');
