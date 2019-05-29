@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-4 col-md-3">
                     <input type="text" class=" form-control" name="id" value="{{ $persona['rut'] }}"
-                        placeholder="1111111-1">
+                        placeholder="1111111-1" require oninput="checkRut(this)">
                 </div>
             </div>
             <div class="row form-group">
