@@ -6,7 +6,7 @@
         <strong>Editar</strong> Usuario
     </div>
     <div class="card-body card-block">
-        <form action="{{ url('ActualizarCrear') }}" method="post" enctype="multipart/form-data" class="form-horizontal">
+        <form action="{{ url('ActualizarCrear') }}" method="post" class="form-horizontal" enctype="multipart/form-data">
             <div class="col">
                     @if($mensaje != null)
                     <label class="alert alert-warning">{{$mensaje}}</label>
@@ -17,7 +17,7 @@
                     <label class=" form-control-label">Avatar</label>
                 </div>
                 <div class="col-3 col-md-2">
-                    <img src="" alt="John Doe" />
+                    <img src="avatars/default.png" alt="default" />
                 </div>
                 <div class="col-5 col-md-5">
                     <input type="file" id="file-input" name="avatar" class="form-control-file">
@@ -105,7 +105,7 @@
 
     </div>
     <div class="card-footer">
-            <input type="text" name="id" value="{{ $id }}"/>
+            <input type="hidden" name="id" value="{{ $id }}"/>
         <button type="submit" class="btn btn-primary btn-sm">
             <i class="fa fa-dot-circle-o"></i> Guardar
         </button>

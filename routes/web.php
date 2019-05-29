@@ -34,6 +34,7 @@ Route::get('Seguimiento','paginaController@seguimiento');
 Route::get('Noticias', 'paginaController@noticias');
 Route::get('Servicios', 'paginaController@servicios');
 Route::get('Contacto', 'paginaController@contacto');
+Route::get('user/profile', 'UserProfileController@show');
 //Noticias
 Route::get('AppMovil', 'paginaController@noticia1');
 Route::get('Seguimientos', 'paginaController@noticia2');
