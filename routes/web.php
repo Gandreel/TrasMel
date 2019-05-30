@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/adm', function () {
     return view('TrasMel.ADM.index');
 });
+Route::get('/adm/perfilUss', function () {
+    return view('TrasMel.Clientes.perfilUss');
+});
 //Route::get('/Personal', function () {
    // return view('TrasMel.ADM.Personal');
 //});
