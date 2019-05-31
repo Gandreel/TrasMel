@@ -127,7 +127,7 @@ class usuarioController extends Controller
                     $usu->email = $request['correo'];
                     $usu->fono = $request['fono'];
                     $usu->direccion = $request['direccion'];
-                    $usu->categoria = $request['categoria'];
+                    $usu->categoria = 2;
                     $usu->avatar = $path;
                     $usu->usuario_id = $request['id'];
                     $usu->save();

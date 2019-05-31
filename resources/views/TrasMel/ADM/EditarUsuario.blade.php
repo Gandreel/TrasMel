@@ -13,7 +13,7 @@
                     <label class=" form-control-label">Avatar</label>
                 </div>
                 <div class="col-3 col-md-2">
-                    <img src="avatars/{{ $persona->avatar }}" alt="John Doe" />
+                    <img src="{{ $persona->avatar }}" alt="{{ $persona['nombre'] }}" />
                 </div>
                 <div class="col-5 col-md-5">
                     <input type="file" id="file-input" name="file-input" class="form-control-file">
@@ -52,8 +52,8 @@
                     <label for="email-input" class=" form-control-label">E-Mail</label>
                 </div>
                 <div class="col-12 col-md-9">
-                    <input type="email" id="email-input" name="email-input" value="{{ $persona['email'] }}"
-                        placeholder="E-Mail" class="form-control">
+                    <input type="email" id="email-input" name="email-input" value="{{ $persona['correo'] }}"
+                        placeholder="E-Mail" class="form-control" disabled>
                 </div>
             </div>
             <div class="row form-group">

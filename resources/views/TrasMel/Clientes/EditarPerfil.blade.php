@@ -56,7 +56,7 @@
                     <label for="email-input" class=" form-control-label">E-Mail</label>
                 </div>
                 <div class="col-12 col-md-9">
-                    <input type="email" id="email-input" name="correo" value="{{ $correo }}"
+                    <input type="email" id="email-input" name="" value="{{ $correo }}"
                         placeholder="E-Mail" class="form-control" disabled>
                 </div>
             </div>
@@ -81,6 +81,7 @@
     </div>
     <div class="card-footer">
             <input type="hidden" name="id" value="{{ $id }}"/>
+            <input type="hidden" name="correo" value="{{ $correo }}"/>
         <button type="submit" class="btn btn-primary btn-sm">
             <i class="fa fa-dot-circle-o"></i> Guardar
         </button>
