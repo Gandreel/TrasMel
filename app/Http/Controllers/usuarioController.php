@@ -38,7 +38,7 @@ class usuarioController extends Controller
                 $mensaje = "Debe Rellenar Sus Datos";
                 return view('TrasMel/Clientes/EditarPerfil', compact('correo', 'pass', 'mensaje', 'id'));
             } else {
-                $usuario = "";
+                $usuario = Persona::where('email', '=', $request['correo'])->first();
                 return view('TrasMel/Clientes/index', compact('usuario'));
             }
         } else {
@@ -139,8 +139,12 @@ class usuarioController extends Controller
             }
             $correo = $request['correo'];
         $id = $request['id'];
+        $Nombre = $request['nombre']." ".$request['apellidos'];
+        $rut = $request['rut'];
+        $dire = $request['direccion'];
+
         $mensaje = "Usuario creado exitosamente";
-        return view('TrasMel/Clientes/EditarPerfil', compact("mensaje",'correo', 'id'));
+        return view('TrasMel/Clientes/index', compact("mensaje",'correo', 'id','rut','dire','Nombre'));
         }
 
         return view('TrasMel/Home/index')->make('Inicio');;

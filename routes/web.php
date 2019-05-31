@@ -29,9 +29,11 @@ Route::get('/Clientes', function () {
 });
 
 /*Administrador*/
+/*Problema Como pasar di*/
 Route::get('/Personal/Editar', function () {
     return view('TrasMel.ADM.EditarUsuario');
 });
+
 Route::get('/ADM/Ruta', function () {
     return view('TrasMel.ADM.Hubicacion_1');
 });
@@ -59,6 +61,9 @@ Route::get('Perfil', 'usuarioController@indexPerfil');
 Route::post('ActualizarCrear', 'usuarioController@crearActualizar');
 Route::post('Login', 'usuarioController@registrarse');
 Route::post('Perfil', 'usuarioController@perfil');
+
+/*Queda Pendiente: Problema como pasar id sin modificar el diseño*/
+Route::post('Editar_Perfil', 'usuarioController@edit');
 
 /*Route::post('user/profile', 'usuarioController@store')->name('profile');
 

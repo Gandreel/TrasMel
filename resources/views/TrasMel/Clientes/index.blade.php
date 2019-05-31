@@ -10,17 +10,17 @@
 			</div>
 			<div class="card-body">
 				<div class="mx-auto d-block">
-					<img class="rounded-circle mx-auto d-block avatarIcon" src="{{ asset('Admin/images/Avatars/Man.png') }}" alt="Card image cap">
-					<h5 class="text-sm-center mt-2 mb-1">Steven Lee</h5>
-					<h5 class="text-sm-center mt-2 mb-1">98.254.365-8</h5>
+					<img class="rounded-circle mx-auto d-block avatarIcon" src="http://127.0.0.1:8000/{{$usuario['avatar']}}"" alt="Card image cap">
+					<h5 class="text-sm-center mt-2 mb-1">{{$usuario->nombre}} {{$usuario->apellidos}}</h5>
+					<h5 class="text-sm-center mt-2 mb-1">{{$usuario->rut}}</h5>
 					<div class="location text-sm-center">
-						<i class="fa fa-home"></i> California, United States
+						<i class="fa fa-home"></i> {{$usuario->direccion}}
 					</div>
 				</div>
 				<hr>
 				<div class="card-text text-center">
 					<div class="card-body">
-						<button type="button" class="btn btn-TrasMel">
+						<button type="button" class="btn btn-TrasMel" >
 							<i class="fa fa-gear"></i>&nbsp; Editar Perfil
 						</button>
 						<button type="button" class="btn btn-TrasMel">
