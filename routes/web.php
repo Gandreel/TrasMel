@@ -29,7 +29,7 @@ Route::get('/Clientes', function () {
 });
 
 /*Administrador*/
-/*Problema Como pasar di*/
+/*Problema Como pasar imagen (Avatar)*/
 Route::get('/Personal/Editar', function () {
     return view('TrasMel.ADM.EditarUsuario');
 });
