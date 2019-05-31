@@ -54,7 +54,13 @@
             </li>
             <li><a href="review.html">Opiniones</a></li>
             <li><a href="{{ url('Noticias') }}">Noticias</a></li>
-            <li><a href="{{ url('Contacto') }}">Contacto</a></li>
+            <li class="down">
+              <a href="">TrasMel</a>
+              <ul class="sub-menu">
+                <li><a href="{{ url('Contacto') }}">Contacto</a></li>
+                <li><a href="{{ url('/TrasMel/Nosotros') }}">Nosotros</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>

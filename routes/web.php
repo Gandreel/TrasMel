@@ -37,6 +37,10 @@ Route::get('/Personal/Editar', function () {
 Route::get('/ADM/Ruta', function () {
     return view('TrasMel.ADM.Hubicacion_1');
 });
+/* Home */
+Route::get('/TrasMel/Nosotros', function () {
+    return view('TrasMel.Home.Nosotros');
+});
 
 Route::post('EditarPersonal','administradorController@editar');
 Route::get('Personal','administradorController@listar');
