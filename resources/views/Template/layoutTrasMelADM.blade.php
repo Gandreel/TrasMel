@@ -106,11 +106,14 @@
     <script src="{{ asset('Admin/vendor/circle-progress/circle-progress.min.js') }}"></script>
     <script src="{{ asset('Admin/vendor/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
     <script src="{{ asset('Admin/vendor/chartjs/Chart.bundle.min.js') }}"></script>
-    <script src="{{ asset('Admin/vendor/select2/select2.min.js') }}">
-    </script>
+    <script src="{{ asset('Admin/vendor/select2/select2.min.js') }}"></script>
+    <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
+    <!-- Api Google-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDezorD_ygecOQATqjEMrnG5BBl2JE_coc"></script>
     <!-- Main JS-->
     <script src="{{ asset('Admin/js/main.js') }}"></script>
+    <script src="{{ asset('Admin/js/geo.js') }}"></script>
 
 </body>
 

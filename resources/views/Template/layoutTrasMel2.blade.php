@@ -95,7 +95,6 @@
   </footer>
   <!-- Footer section end -->
 
-
   <!--====== Javascripts & Jquery ======-->
   <script src="{{ asset('Home/js/jquery-3.2.1.min.js') }}"></script>
   <script src="{{ asset('Home/js/bootstrap.min.js') }}"></script>
@@ -103,7 +102,11 @@
   <script src="{{ asset('Home/js/owl.carousel.min.js') }}"></script>
   <script src="{{ asset('Home/js/jquery.sticky-sidebar.min.js') }}"></script>
   <script src="{{ asset('Home/js/jquery.magnific-popup.min.js') }}"></script>
-  <script src="{{ asset('Home/js/main.js') }}"></script>
 
+  <script src="{{ asset('Home/js/main.js') }}"></script>
+  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDezorD_ygecOQATqjEMrnG5BBl2JE_coc"></script>
+  <script src="{{ asset('Admin/js/geo.js') }}"></script>
   </body>
 </html>

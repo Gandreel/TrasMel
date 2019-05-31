@@ -123,26 +123,7 @@
       <div class="copyright"><a href="">TrasMel</a> 2019 @ All rights reserved</div>
     </div>
   </footer>
-  <!-- Footer section end -->
-  <script type="text/javascript">// <![CDATA[
-if (navigator.geolocation) {
-  var tiempo_de_espera = 3000;
-  navigator.geolocation.getCurrentPosition(mostrarCoordenadas, mostrarError, { enableHighAccuracy: true, timeout: tiempo_de_espera, maximumAge: 0 } );
-}
-else {
-  alert("La Geolocalización no es soportada por este navegador");
-}
 
-function mostrarCoordenadas(position) {
-  alert("Latitud: " + position.coords.latitude + ", Longitud: " + position.coords.longitude);
-}
-
-function mostrarError(error) {
-  var errores = {1: 'Permiso denegado', 2: 'Posición no disponible', 3: 'Expiró el tiempo de respuesta'};
-  alert("Error: " + errores[error.code]);
-}
-// ]]></script>
-  <!--====== Javascripts & Jquery ======-->
   <script src="{{ asset('Home/js/jquery-3.2.1.min.js') }}"></script>
   <script src="{{ asset('Home/js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('Home/js/jquery.slicknav.min.js') }}"></script>
