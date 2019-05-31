@@ -39,7 +39,7 @@ class usuarioController extends Controller
                 return view('TrasMel/Clientes/EditarPerfil', compact('correo', 'pass', 'mensaje', 'id'));
             } else {
                 $usuario = "";
-                return view('TrasMel/Home/index', compact('usuario'));
+                return view('TrasMel/Clientes/index', compact('usuario'));
             }
         } else {
             $mensaje = 'Usuario o Contraseña Invalido';

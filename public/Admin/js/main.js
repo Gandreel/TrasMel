@@ -503,7 +503,7 @@
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', ''],
+          labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto'],
           datasets: [
             {
               label: 'My First dataset',
@@ -630,13 +630,15 @@
           datasets: [
             {
               label: "My First dataset",
-              data: [60, 40],
+              data: [10, 30,60],
               backgroundColor: [
                 '#00b5e9',
+                '#ffc107',
                 '#fa4251'
               ],
               hoverBackgroundColor: [
                 '#00b5e9',
+                '#ffc107',
                 '#fa4251'
               ],
               borderWidth: [
@@ -644,13 +646,15 @@
               ],
               hoverBorderColor: [
                 'transparent',
+                'transparent',
                 'transparent'
               ]
             }
           ],
           labels: [
-            'Products',
-            'Services'
+            'Entregados',
+            'Stand By',
+            'En transito'
           ]
         },
         options: {

@@ -1,4 +1,4 @@
-@extends('Template.layoutTrasMelADM')
+@extends('Template.layoutTrasMelUss')
 @section('Contenido')
 
 <div class="card">
@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-4 col-md-3">
                     <input type="text" class=" form-control" name="rut" value=""
-                        placeholder="1111111-1">
+                        placeholder="1111111-1" required>
                 </div>
             </div>
             <div class="row form-group">
@@ -38,16 +38,16 @@
                 </div>
                 <div class="col-12 col-md-9">
                     <input type="text" id="text-input" name="nombre" value=""
-                        placeholder="Nombre" class="form-control">
+                        placeholder="Nombre" class="form-control" required>
                 </div>
             </div>
             <div class="row form-group">
                 <div class="col col-md-3">
-                    <label for="apellido-input" class=" form-control-label">Apellido Paterno</label>
+                    <label for="apellido-input" class=" form-control-label">Apellidos</label>
                 </div>
                 <div class="col-12 col-md-9">
                     <input type="text" id="apellido-input" name="apellidos" value=""
-                        placeholder="Apellido Paterno" class="form-control">
+                        placeholder="Apellidos" class="form-control" required>
                 </div>
             </div>
 
@@ -57,7 +57,7 @@
                 </div>
                 <div class="col-12 col-md-9">
                     <input type="email" id="email-input" name="correo" value="{{ $correo }}"
-                        placeholder="E-Mail" class="form-control">
+                        placeholder="E-Mail" class="form-control" disabled>
                 </div>
             </div>
             <div class="row form-group">
@@ -75,34 +75,9 @@
                 </div>
                 <div class="col-12 col-md-9">
                     <input type="text" id="direccion-input" name="direccion" value=""
-                        placeholder="Las Ágatas 405, Viña del Mar, Viña del Mar, Chile" class="form-control">
+                        placeholder="Las Ágatas 405, Viña del Mar, Viña del Mar, Chile" class="form-control" required>
                 </div>
             </div>
-            <div class="row form-group">
-                <div class="col col-md-3">
-                    <label for="select" class=" form-control-label">Tipo de Usuario</label>
-                </div>
-                <div class="col-5 col-md-4">
-                    <select name="categoria" id="select" class="form-control">
-                        <option value="0">Seleccione</option>
-                        <option value="1">Administrador</option>
-                        <option value="2">Cliente</option>
-                        <option value="3">Chofer</option>
-                        <option value="4">Pioneta</option>
-                    </select>
-                </div>
-                <div class="col col-md-1">
-                    <label for="select" class=" form-control-label">Estado</label>
-                </div>
-                <div class="col-5 col-md-4">
-                    <select name="select" id="select" class="form-control">
-                        <option value="0">Seleccione</option>
-                        <option value="1">Activo</option>
-                        <option value="2">Inactivo</option>
-                    </select>
-                </div>
-            </div>
-
     </div>
     <div class="card-footer">
             <input type="hidden" name="id" value="{{ $id }}"/>

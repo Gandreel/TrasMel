@@ -19,12 +19,16 @@ Route::get('/', function () {
 Route::get('/adm', function () {
     return view('TrasMel.ADM.index');
 });
-Route::get('/adm/perfilUss', function () {
-    return view('TrasMel.Clientes.perfilUss');
+
+/*Clientes*/
+Route::get('/Clientes/Editar_Perfil', function () {
+    return view('TrasMel.Clientes.EditarPerfil');
 });
-//Route::get('/Personal', function () {
-   // return view('TrasMel.ADM.Personal');
-//});
+Route::get('/Clientes', function () {
+    return view('TrasMel.Clientes.index');
+});
+
+/*Administrador*/
 Route::get('/Personal/Editar', function () {
     return view('TrasMel.ADM.EditarUsuario');
 });

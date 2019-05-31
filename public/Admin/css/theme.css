@@ -309,7 +309,7 @@ section {
 }
 
 .main-content {
-    padding-top: 10%;
+    padding-top: 2%;
     min-height: 100vh;
 }
 
@@ -491,7 +491,7 @@ section {
     position: absolute;
     height: 45px;
     width: 45px;
-    background: #63c76a;
+    background: #FF0266;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
@@ -518,8 +518,26 @@ section {
     color: #fff;
 }
 
+.avatarIcon{
+    width: 100px;
+    height: 100px
+}
+
+.btn-TrasMel{
+    background: #6200EE;
+    color: #fff;
+}
+
+.btn-TrasMel:hover{
+    background: #FF0266;
+}
+
+.btn-TrasMel-warnign:hover{
+    background:#D50000;
+}
+
 .au-btn-plus:hover {
-    background: #59bd60;
+    background: #FF0266;
 }
 
 .au-btn-load {
@@ -4130,6 +4148,10 @@ section {
 
 .dot--green {
     background: #00ad5f;
+}
+
+.dot--yellow {
+    background: #ffc107;
 }
 
 .dot--red {
@@ -14582,7 +14604,7 @@ section {
 }
 
 .bg-overlay--blue {
-    background: rgba(49, 89, 253, 0.9);
+    background: rgba(98,0,238, 0.9);
 }
 
 .bg-c1 {

@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
   <!-- Title Page-->
-  <title>TrasMel ADM</title>
+  <title>TrasMel Cliente</title>
 
   <!-- Fontfaces CSS-->
   <link href="{{ asset('Admin/css/font-face.css') }}" rel="stylesheet" media="all">
@@ -38,31 +38,21 @@
             <aside class="menu-sidebar d-none d-lg-block">
                 <div class="logo">
                     <a href="#">
-                        <img src="{{ asset('Admin/images/icon/logo.png') }}" alt="Cool Admin" >
+                        <img src="{{ asset('Admin/images/icon/logo.png') }}" alt="TrasMel Cliente" >
                     </a>
                 </div>
                 <div class="menu-sidebar__content js-scrollbar1">
                     <nav class="navbar-sidebar">
                         <ul class="list-unstyled navbar__list">
-                            <li><a href="{{ url('/adm') }}"><i class="fas fa-home"></i>Inicio</a></li>
+                            <li><a href="{{ url('/Clientes') }}"><i class="fas fa-home"></i>Inicio</a></li>
                             <li class="active has-sub">
                                 <a class="js-arrow" href="#"><i class="fas fa-user"></i>Cuenta</a>
                                 <ul class=" navbar__sub-list js-sub-list">
-                                    <li><a href="">Editar Perfil</a></li>
-                                    <li><a href="">Editar Empresa</a></li>
-                                    <li><a href="">Configuracion</a></li>
+                                    <li><a href="{{ url('/Personal/Editar') }}">Editar Perfil</a></li>
+                                    <li><a href="">Cerrar Sesion</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ url('/Personal') }}"><i class="fas fa-users"></i>Personal</a></li>
-                            <li><a href=""><i class="fas fa-th-list"></i>Operaciones</a></li>
-                            <li class="active has-sub">
-                                <a class="js-arrow" href="#"><i class="fas fa-chart-line"></i>Estadisticas</a>
-                                <ul class=" navbar__sub-list js-sub-list">
-                                    <li><a href="">Informes</a></li>
-                                    <li><a href="">Graficos</a></li>
-                                    <li><a href="">Otros</a></li>
-                                </ul>
-                            </li>
+                            <li><a href=""><i class="fas fa-th-list"></i>Mis Operaciones</a></li>
                         </ul>
                     </nav>
                 </div>

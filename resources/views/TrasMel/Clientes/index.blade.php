@@ -1,8 +1,7 @@
-@extends('Template.layoutTrasMelADM')
+@extends('Template.layoutTrasMelUss')
 @section('Contenido')
 
 <div class="row">
-
 	<div class="col-lg-12">
 		<div class="card">
 			<div class="card-header">
@@ -11,26 +10,26 @@
 			</div>
 			<div class="card-body">
 				<div class="mx-auto d-block">
-					<img class="rounded-circle mx-auto d-block" src="{{ asset('Admin/images/icon/avatar-01.jpg') }}" alt="Card image cap">
+					<img class="rounded-circle mx-auto d-block avatarIcon" src="{{ asset('Admin/images/Avatars/Man.png') }}" alt="Card image cap">
 					<h5 class="text-sm-center mt-2 mb-1">Steven Lee</h5>
 					<h5 class="text-sm-center mt-2 mb-1">98.254.365-8</h5>
 					<div class="location text-sm-center">
-						<i class="fa fa-map-marker"></i> California, United States
+						<i class="fa fa-home"></i> California, United States
 					</div>
 				</div>
 				<hr>
 				<div class="card-text text-center">
 					<div class="card-body">
-						<button type="button" class="btn btn-success">
+						<button type="button" class="btn btn-TrasMel">
 							<i class="fa fa-gear"></i>&nbsp; Editar Perfil
 						</button>
-						<button type="button" class="btn btn-primary">
+						<button type="button" class="btn btn-TrasMel">
 							<i class="fa fa-envelope"></i>&nbsp; Cambiar Correo
 						</button>						
-						<button type="button" class="btn btn-warning">
+						<button type="button" class="btn btn-TrasMel">
 							<i class="fa fa-magic"></i>&nbsp; Cambiar Contraseña
 						</button>
-						<button type="button" class="btn btn-danger">
+						<button type="button" class="btn btn-TrasMel btn-TrasMel-warnign">
 							<i class="fa fa-exclamation-circle"></i>&nbsp;Eliminar Cuenta
 						</button>
 					</div>
@@ -38,7 +37,6 @@
 			</div>
 		</div>
 	</div>
-
 </div>
 
 

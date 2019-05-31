@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-4 col-md-3">
                     <input type="text" class=" form-control" name="id" value="{{ $persona['rut'] }}"
-                        placeholder="1111111-1" require oninput="checkRut(this)">
+                        placeholder="1111111-1" require oninput="checkRut(this)" required>
                 </div>
             </div>
             <div class="row form-group">
@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-12 col-md-9">
                     <input type="text" id="text-input" name="text-input" value="{{ $persona['nombre'] }}"
-                        placeholder="Nombre" class="form-control">
+                        placeholder="Nombre" class="form-control" required>
                 </div>
             </div>
             <div class="row form-group">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-12 col-md-9">
                     <input type="text" id="text-input" name="text-input" value="{{ $persona['apellidos'] }}"
-                        placeholder="Apellido Paterno" class="form-control">
+                        placeholder="Apellido Paterno" class="form-control" required>
                 </div>
             </div>
 
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col-12 col-md-9">
                     <input type="text" id="text-input" name="text-input" value="{{ $persona['fono'] }}"
-                        placeholder="+56987456325" class="form-control">
+                        placeholder="+56987456325" class="form-control"required>
                 </div>
             </div>
             <div class="row form-group">
@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-12 col-md-9">
                     <input type="text" id="text-input" name="text-input" value="{{ $persona['direccion'] }}"
-                        placeholder="Las Ágatas 405, Viña del Mar, Viña del Mar, Chile" class="form-control">
+                        placeholder="Las Ágatas 405, Viña del Mar, Viña del Mar, Chile" class="form-control"required>
                 </div>
             </div>
             <div class="row form-group">
@@ -79,8 +79,8 @@
                     <label for="select" class=" form-control-label">Tipo de Usuario</label>
                 </div>
                 <div class="col-5 col-md-4">
-                    <select name="select" id="select" class="form-control">
-                        <option value="0">Seleccione</option>
+                    <select name="select" id="select" class="form-control" required>
+                        <option value="">Seleccione</option>
                         <option value="1">Administrador</option>
                         <option value="2">Cliente</option>
                         <option value="3">Chofer</option>
@@ -91,8 +91,8 @@
                     <label for="select" class=" form-control-label">Estado</label>
                 </div>
                 <div class="col-5 col-md-4">
-                    <select name="select" id="select" class="form-control">
-                        <option value="0">Seleccione</option>
+                    <select name="select" id="select" class="form-control" required>
+                        <option value="">Seleccione</option>
                         <option value="1">Activo</option>
                         <option value="2">Inactivo</option>
                     </select>
