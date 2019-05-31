@@ -54,7 +54,7 @@
                                 </ul>
                             </li>
                             <li><a href="{{ url('/Personal') }}"><i class="fas fa-users"></i>Personal</a></li>
-                            <li><a href=""><i class="fas fa-th-list"></i>Operaciones</a></li>
+                            <li><a href="{{ url('/ADM/Ruta') }}"><i class="fas fa-th-list"></i>Operaciones</a></li>
                             <li class="active has-sub">
                                 <a class="js-arrow" href="#"><i class="fas fa-chart-line"></i>Estadisticas</a>
                                 <ul class=" navbar__sub-list js-sub-list">

@@ -101,7 +101,7 @@ function getDirections() {
 function calcRoute() {
   console.log("calcRoute");
   start = directionsLatLng;
-  end = "Freire 2411 Quilpué , XH5H+3C ";
+  end = "Duoc UC: Sede Viña Del Mar - Álvares 2336, Viña del Mar, Región de Valparaíso";
   var request = {
     origin:start,
     destination:end,

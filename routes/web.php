@@ -16,7 +16,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/adm', function () {
+Route::get('/ADM', function () {
     return view('TrasMel.ADM.index');
 });
 
@@ -31,6 +31,9 @@ Route::get('/Clientes', function () {
 /*Administrador*/
 Route::get('/Personal/Editar', function () {
     return view('TrasMel.ADM.EditarUsuario');
+});
+Route::get('/ADM/Ruta', function () {
+    return view('TrasMel.ADM.Hubicacion_1');
 });
 
 Route::post('EditarPersonal','administradorController@editar');

@@ -63,9 +63,8 @@
   <!-- Header section end -->
   
   <!-- Intro section -->
-  <section class="intro-section" style="background: #8e2de2; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #8e2de2, #4a00e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *">
+  <section class="intro-section login_back">
+
     @yield('Contenido')
   </section>
   <!-- Intro section end -->

@@ -604,6 +604,12 @@ ol {
 	padding: 115px 0;
 }
 
+.login_back{
+	background: #8e2de2; /* fallback for old browsers */
+  	background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0); /* Chrome 10-25, Safari 5.1-6 */
+  	background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
 .text-box .top-meta {
 	font-size: 18px;
 	font-weight: 500;
